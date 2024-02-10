@@ -59,7 +59,7 @@ npm run lint
 [tsc](https://www.typescriptlang.org/docs/handbook/compiler-options.html#handbook-content)でTypescript型チェックを実行
 
 ```bash
-yarn tsc
+npm run tsc
 ```
 
 設定ファイル
