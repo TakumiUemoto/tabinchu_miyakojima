@@ -4,7 +4,6 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/components/organisms/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -39,10 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang='ja'>
       <body className={inter.className}>
-        <ChakraProvider cssVarsRoot="body">
-          <Header />
+        <ChakraProvider cssVarsRoot='body'>
+          {/* <Header /> */}
           {children}
         </ChakraProvider>
       </body>
