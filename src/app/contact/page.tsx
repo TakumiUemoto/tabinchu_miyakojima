@@ -1,4 +1,4 @@
-import type { NextPage } from 'next/types';
+import { NextPage } from 'next';
 
 const Contact: NextPage = () => {
   return <>Contact</>;
