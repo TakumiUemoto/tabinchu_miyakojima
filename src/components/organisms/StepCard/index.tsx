@@ -1,61 +1,46 @@
-import { ChevronRightIcon } from '@chakra-ui/icons';
-
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Flex,
-  Heading,
-  Text,
-} from '@chakra-ui/react';
+import { Button, Card, CardHeader, Heading, VStack } from '@chakra-ui/react';
 
 type StepCardProps = {
   stepNum: number;
   titleText: string;
-  contentText: string;
+  content: React.ReactNode;
   buttonText?: string;
   hasButton: boolean;
-  hasNext: boolean;
 };
 
 export const StepCard: React.FC<StepCardProps> = (props) => {
-  const { stepNum, titleText, contentText, hasButton, buttonText, hasNext } =
-    props;
+  const { stepNum, titleText, content, hasButton, buttonText } = props;
   return (
-    <Flex align='center'>
-      <Card minH='40dvh' w='16.5dvw'>
-        <CardHeader
-          bgColor='#000'
-          opacity={0.8}
-          p='0.5rem'
-          borderRadius='0.5rem 0.5rem 0 0'
+    <Card w='full' minH='300px' pb='1rem'>
+      <CardHeader
+        bgColor='#000'
+        opacity={0.8}
+        p='0.5rem'
+        borderRadius='0.5rem 0.5rem 0 0'
+      >
+        <Heading
+          color='white'
+          fontSize='2xl'
+          textAlign='center'
+        >{`STEP${stepNum}`}</Heading>
+      </CardHeader>
+
+      <VStack p='1rem'>
+        <Heading
+          fontSize='2xl'
+          p='1rem'
+          textDecoration='underline'
+          textUnderlineOffset='0.5rem'
         >
-          <Heading
-            color='white'
-            fontSize='2xl'
-            textAlign='center'
-          >{`STEP${stepNum}`}</Heading>
-        </CardHeader>
-
-        <CardBody>
-          <Heading fontSize='xl'>{titleText}</Heading>
-          <Text fontSize='sm' pt='0.5rem'>
-            {contentText}
-          </Text>
-        </CardBody>
-
+          {titleText}
+        </Heading>
+        {content}
         {hasButton && (
-          <CardFooter display='flex' justify='center'>
-            <Button size='md' w='full'>
-              {buttonText}
-            </Button>
-          </CardFooter>
+          <Button size='md' w={{ base: '75%', md: '50%' }}>
+            {buttonText}
+          </Button>
         )}
-      </Card>
-
-      {hasNext && <ChevronRightIcon fontSize='4xl' mx='0.5rem' />}
-    </Flex>
+      </VStack>
+    </Card>
   );
 };

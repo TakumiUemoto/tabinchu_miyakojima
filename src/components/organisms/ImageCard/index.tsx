@@ -1,6 +1,6 @@
-import { Card, Center } from '@chakra-ui/react';
+import { Card, CardProps, Center } from '@chakra-ui/react';
 
-type ImageCardProps = {
+type ImageCardProps = CardProps & {
   imagePath: string;
   children: React.ReactNode;
 };
@@ -8,15 +8,15 @@ type ImageCardProps = {
 export const ImageCard: React.FC<ImageCardProps> = ({
   imagePath,
   children,
+  ...rest
 }) => {
   return (
-    <Card overflow='hidden' variant='outline'>
+    <Card overflow='hidden' variant='outline' w='full' {...rest}>
       <Center
-        backgroundImage={imagePath}
+        backgroundImage={`linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(${imagePath})`}
         backgroundSize='cover'
         backgroundPosition='center'
         backgroundRepeat='no-repeat'
-        w='80dvw'
         minH='400px'
       >
         {children}
