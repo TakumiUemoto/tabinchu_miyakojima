@@ -5,6 +5,7 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import { Image } from '@chakra-ui/image';
 import { Flex, Link } from '@chakra-ui/layout';
 import {
+  Text,
   Drawer,
   DrawerOverlay,
   DrawerContent,
@@ -16,7 +17,6 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaInstagram } from 'react-icons/fa';
 
 export const Header: React.FC = () => {
   const path = usePathname();
@@ -33,45 +33,61 @@ export const Header: React.FC = () => {
         h={{ base: '80px', md: '100px' }}
         p='0 1rem 0 0'
         zIndex={100}
-        bg='rgba(255, 255, 255, 0.5)'
+        bg='rgba(232, 232, 232, 1.0)'
       >
         <Image
-          src='logo_transparent.jpg'
+          src='logo_text_skeleton.jpg'
           borderRadius='full'
-          boxSize={{ base: '120px', md: '150px' }}
-          alt='logo_transparent'
+          boxSize={{ base: '80px', md: '100px' }}
+          alt='logo_text_skeleton'
         />
 
         <Flex
-          display={{ base: 'none', lg: 'flex' }}
+          display={{ base: 'none', md: 'flex' }}
           justify='space-between'
           gap='1rem'
           w='auto'
         >
           {PageLinkList.map((link, i) => {
             return (
-              <Link
+              <Flex
                 key={`${link.path}-${i}`}
-                as={NextLink}
-                fontWeight='bold'
-                color={path === link.path ? '#000' : 'gray.700'}
-                href={link.path}
+                align='center'
+                gap={{ base: '0.5rem', md: '1rem' }}
               >
-                {link.text}
-              </Link>
+                <Link
+                  as={NextLink}
+                  fontSize={path === link.path ? '1.25rem' : '1rem'}
+                  fontWeight='bold'
+                  color={path === link.path ? '#000' : 'gray.500'}
+                  href={link.path}
+                >
+                  {link.text}
+                </Link>
+                {i + 1 !== PageLinkList.length && <Text>/</Text>}
+              </Flex>
             );
           })}
-          <Link as={NextLink} href={process.env.NEXT_PUBLIC_INSTAGRAM}>
-            <FaInstagram fontSize='1.5rem' />
-          </Link>
         </Flex>
-        <HamburgerIcon
-          display={{ base: 'flex', md: 'none' }}
-          width={{ base: '1.5rem', md: '2rem' }}
-          height={{ base: '1.5rem', md: '2rem' }}
-          onClick={onOpen}
-          alignItems='center'
-        />
+
+        <Flex align='center' gap='1rem'>
+          <Link as={NextLink} href={process.env.NEXT_PUBLIC_INSTAGRAM}>
+            <Image
+              src='instagram.jpg'
+              borderRadius='full'
+              boxSize='2rem'
+              alt='instagram'
+            />
+          </Link>
+
+          <HamburgerIcon
+            display={{ base: 'flex', md: 'none' }}
+            width={{ base: '1.5rem', md: '2rem' }}
+            height={{ base: '1.5rem', md: '2rem' }}
+            onClick={onOpen}
+            alignItems='center'
+          />
+        </Flex>
       </Flex>
 
       <Drawer placement='top' onClose={onClose} isOpen={isOpen}>

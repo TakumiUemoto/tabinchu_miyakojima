@@ -11,7 +11,7 @@ import { StepCard } from '@/components/organisms/StepCard';
 export const HomeReservation: React.FC = () => {
   return (
     <VStack w='full'>
-      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}>
+      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} mb='1rem'>
         予約からツアー当日の流れ
       </Text>
 
@@ -37,6 +37,7 @@ export const HomeReservation: React.FC = () => {
             ),
             button: '予約状況',
             hasButton: true,
+            buttonColorScheme: 'orange',
           },
           {
             title: '②公式LINEから予約',
@@ -59,6 +60,7 @@ export const HomeReservation: React.FC = () => {
             ),
             button: '公式LINE',
             hasButton: true,
+            buttonColorScheme: 'green',
           },
           {
             title: '③前日の確認連絡',
@@ -105,6 +107,7 @@ export const HomeReservation: React.FC = () => {
             content={item.content}
             buttonText={item.button}
             hasButton={item.hasButton}
+            buttonColorScheme={item.buttonColorScheme}
           />
         ))}
       </Flex>

@@ -1,5 +1,13 @@
 import { Image } from '@chakra-ui/image';
-import { Center, Button, Text, Flex, Heading, VStack } from '@chakra-ui/react';
+import {
+  Center,
+  Button,
+  Text,
+  Flex,
+  Heading,
+  VStack,
+  Link,
+} from '@chakra-ui/react';
 
 import styles from './templates.module.scss';
 
@@ -14,11 +22,12 @@ export const HomeMain: React.FC = () => {
       className={styles.main}
     >
       <Image
-        src='logo_transparent.jpg'
+        src='logo_text_skeleton.jpg'
         objectFit='cover'
         borderRadius='full'
-        boxSize={{ base: '400px', md: '550px', xl: '650px' }}
-        alt='logo_transparent'
+        boxSize={{ base: '350px', md: '400px' }}
+        alt='logo_text_skeleton'
+        mt={{ base: '-1rem', md: '3rem' }}
       />
       <VStack>
         <Text
@@ -54,12 +63,16 @@ export const HomeMain: React.FC = () => {
         mb={{ base: '0', md: '1.5rem' }}
         bg='rgba(0,0,0, 0.35)'
       >
-        <Button colorScheme='whiteAlpha' size='lg' w='full'>
-          予約状況
-        </Button>
-        <Button colorScheme='whiteAlpha' size='lg' w='full'>
-          予約・問い合わせ
-        </Button>
+        <Link href={process.env.NEXT_PUBLIC_TIMETREE} isExternal>
+          <Button colorScheme='whiteAlpha' size='lg' w='full'>
+            予約状況
+          </Button>
+        </Link>
+        <Link href={process.env.NEXT_PUBLIC_LINE} isExternal>
+          <Button colorScheme='whiteAlpha' size='lg' w='full'>
+            予約・問い合わせ
+          </Button>
+        </Link>
       </Flex>
     </Center>
   );

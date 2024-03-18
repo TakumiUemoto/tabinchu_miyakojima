@@ -1,21 +1,29 @@
 import {
   Box,
   Button,
+  ButtonProps,
   Card,
   CardHeader,
   Heading,
   VStack,
 } from '@chakra-ui/react';
 
-type StepCardProps = {
+export type StepCardProps = {
   titleText: string;
   content: React.ReactNode;
   buttonText?: string;
   hasButton: boolean;
+  buttonColorScheme?: ButtonProps['colorScheme'];
 };
 
 export const StepCard: React.FC<StepCardProps> = (props) => {
-  const { titleText, content, hasButton, buttonText } = props;
+  const {
+    titleText,
+    content,
+    hasButton,
+    buttonText,
+    buttonColorScheme = 'blackAlpha',
+  } = props;
   return (
     <Card
       w='400px'
@@ -41,7 +49,7 @@ export const StepCard: React.FC<StepCardProps> = (props) => {
       <VStack minH='240px' justify='space-between' px='1rem'>
         <Box mt='1rem'>{content}</Box>
         {hasButton && (
-          <Button colorScheme='blackAlpha' size='md' w='full'>
+          <Button colorScheme={buttonColorScheme} size='md' w='full'>
             {buttonText}
           </Button>
         )}

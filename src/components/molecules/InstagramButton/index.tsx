@@ -10,7 +10,7 @@ export const InstagramButton: React.FC<Props> = (props) => {
       as='button'
       justify='center'
       align='center'
-      width='full'
+      width='300px'
       height='60px'
       borderRadius='0.3rem'
       fontSize='1.1rem'

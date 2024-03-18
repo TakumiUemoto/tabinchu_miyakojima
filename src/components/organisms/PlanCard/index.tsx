@@ -7,7 +7,11 @@ import {
   VStack,
   Image,
   CardProps,
+  ButtonProps,
+  Link,
 } from '@chakra-ui/react';
+
+import NextLink from 'next/link';
 
 type PlanCardProps = Omit<CardProps, 'content'> & {
   variant: 'summary' | 'detail';
@@ -15,6 +19,8 @@ type PlanCardProps = Omit<CardProps, 'content'> & {
   heading: React.ReactNode;
   content: React.ReactNode;
   buttonText?: string;
+  buttonLink?: string;
+  buttonColorScheme?: ButtonProps['colorScheme'];
 };
 
 export const PlanCard: React.FC<PlanCardProps> = ({
@@ -23,6 +29,8 @@ export const PlanCard: React.FC<PlanCardProps> = ({
   heading,
   content,
   buttonText,
+  buttonLink,
+  buttonColorScheme = 'blackAlpha',
   ...rest
 }) => {
   return (
@@ -46,12 +54,11 @@ export const PlanCard: React.FC<PlanCardProps> = ({
             {content}
           </VStack>
 
-          <Button
-            colorScheme='whiteAlpha'
-            w={{ base: '75%', md: '50%', lg: '25%' }}
-          >
-            {buttonText}
-          </Button>
+          <Link as={NextLink} href={buttonLink}>
+            <Button colorScheme={buttonColorScheme} w={{ base: '250px' }}>
+              {buttonText}
+            </Button>
+          </Link>
         </VStack>
       ) : (
         <>

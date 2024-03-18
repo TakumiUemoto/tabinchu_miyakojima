@@ -4,7 +4,9 @@ import { VStack, Heading, Flex, Text } from '@chakra-ui/react';
 export const HomePlan: React.FC = () => {
   return (
     <VStack w='full'>
-      <Text fontSize='4xl'>ツアー内容</Text>
+      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} mb='1rem'>
+        ツアー内容
+      </Text>
 
       <Flex flexDir='column' w='full'>
         <Flex flexDir={{ base: 'column', '2xl': 'row' }} gap='2rem'>
@@ -27,6 +29,7 @@ export const HomePlan: React.FC = () => {
                 </Text>
               ),
               buttonText: 'ツアー詳細',
+              buttonLink: '/plan',
             },
             {
               imagePath: 'home/plan_skin.jpg',
@@ -48,6 +51,7 @@ export const HomePlan: React.FC = () => {
                 </Text>
               ),
               buttonText: 'ツアー詳細',
+              buttonLink: '/plan',
             },
             {
               imagePath: 'home/plan_sup.jpg',
@@ -67,6 +71,7 @@ export const HomePlan: React.FC = () => {
                 </Text>
               ),
               buttonText: 'ツアー詳細',
+              buttonLink: '/plan',
             },
           ].map((plan, i) => (
             <PlanCard
@@ -76,6 +81,7 @@ export const HomePlan: React.FC = () => {
               heading={plan.heading}
               content={plan.content}
               buttonText={plan.buttonText}
+              buttonLink={plan.buttonLink}
             />
           ))}
         </Flex>
