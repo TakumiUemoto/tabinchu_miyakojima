@@ -1,16 +1,13 @@
 'use client';
 
-import { redirect } from 'next/navigation';
-
 import { NextPage } from 'next';
 import { useLayoutEffect } from 'react';
 
-const Page: NextPage = () => {
+const TopPage: NextPage = () => {
   useLayoutEffect(() => {
-    if (typeof window !== 'undefined') {
-      redirect('/home');
-    }
-  });
+    window.location.href = '/home';
+  }, []);
   return <></>;
 };
-export default Page;
+
+export default TopPage;

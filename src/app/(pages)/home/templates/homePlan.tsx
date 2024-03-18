@@ -1,111 +1,90 @@
-import { ImageCard } from '@/components/organisms/ImageCard';
 import { PlanCard } from '@/components/organisms/PlanCard';
-import { VStack, Heading, Flex, Button, Text } from '@chakra-ui/react';
+import { VStack, Heading, Flex, Text } from '@chakra-ui/react';
 
 export const HomePlan: React.FC = () => {
   return (
     <VStack w='full'>
-      <Heading fontSize='3xl'>Tour Plan</Heading>
-      <Text fontSize='4xl'>ツアープラン</Text>
+      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} mb='1rem'>
+        ツアー内容
+      </Text>
 
-      <Flex flexDir='column' gap='0.5rem' w='full'>
-        <ImageCard imagePath='sea/main_sea_plan_all.jpg'>
-          <VStack textAlign='center' color='white' fontWeight='bold'>
-            <Heading size={{ base: 'md', lg: 'lg' }}>
-              一眼レフで撮影した
-            </Heading>
-            <Heading size={{ base: 'md', lg: 'lg' }}>
-              写真を無料プレゼント！
-            </Heading>
-            <Text size={{ base: 'xs', md: 'sm', lg: 'md' }}>
-              水中・水上どこでも沢山撮影します！
-            </Text>
-            <Button colorScheme='whiteAlpha'>すべてのプランを見る</Button>
-          </VStack>
-        </ImageCard>
-
-        {[
-          {
-            imagePath: 'sea/main_sea_plan_1.jpg',
-            heading: (
-              <Heading size={{ base: 'md', lg: 'lg' }}>
-                ウミガメ観察ツアー
-              </Heading>
-            ),
-            content: (
-              <>
-                <Text size={{ base: 'xs', md: 'sm', lg: 'md' }}>
-                  ウミガメを泳ぎながら観察、
+      <Flex flexDir='column' w='full'>
+        <Flex flexDir={{ base: 'column', '2xl': 'row' }} gap='2rem'>
+          {[
+            {
+              imagePath: 'home/plan_snorkel.jpg',
+              heading: (
+                <Heading size={{ base: 'lg', lg: 'xl' }}>シュノーケル</Heading>
+              ),
+              content: (
+                <Text
+                  size={{ base: 'md', md: 'lg', lg: 'xl' }}
+                  wordBreak='keep-all'
+                  overflowWrap='anywhere'
+                  fontWeight={600}
+                >
+                  ライフジャケットを着用します。
                   <br />
-                  写真撮影後にはサンゴ礁へ！
+                  初心者の方でも安心してお楽しみいただけるツアーです。
                 </Text>
-              </>
-            ),
-            buttonText: 'プランを見る',
-          },
-          {
-            imagePath: 'sea/main_sea_plan_2.jpg',
-            heading: (
-              <Heading size={{ base: 'md', lg: 'lg' }}>
-                SUPクルージングツアー
-              </Heading>
-            ),
-            content: (
-              <>
-                <Text>二人貸切なので安心、安全！</Text>
-              </>
-            ),
-            buttonText: 'プランを見る',
-          },
-          {
-            imagePath: 'sea/main_sea_plan_3.jpg',
-            heading: (
-              <Heading size={{ base: 'md', lg: 'lg' }} textAlign='center'>
-                シュノーケリング&SUP
-                <br />
-                セットツアー
-              </Heading>
-            ),
-            content: (
-              <>
-                <Text size={{ base: 'xs', md: 'sm', lg: 'md' }}>
-                  シュノーケルもSUPも楽しめる
+              ),
+              buttonText: 'ツアー詳細',
+              buttonLink: '/plan',
+            },
+            {
+              imagePath: 'home/plan_skin.jpg',
+              heading: (
+                <Heading size={{ base: 'lg', lg: 'xl' }}>
+                  スキンダイビング
+                </Heading>
+              ),
+              content: (
+                <Text
+                  size={{ base: 'md', md: 'lg', lg: 'xl' }}
+                  wordBreak='keep-all'
+                  overflowWrap='anywhere'
+                  fontWeight={600}
+                >
+                  ライフジャケットなしで泳げる
                   <br />
-                  お得なプラン
+                  中級者向けのツアーです。
                 </Text>
-              </>
-            ),
-            buttonText: 'プランを見る',
-          },
-          {
-            imagePath: 'sea/main_sea_plan_4.jpg',
-            heading: (
-              <Heading size={{ base: 'md', lg: 'lg' }} textAlign='center'>
-                サンセットSUP
-                <br />
-                クルージングツアー
-              </Heading>
-            ),
-            content: (
-              <>
-                <Text size={{ base: 'xs', md: 'sm', lg: 'md' }}>
-                  海に沈む夕日を見ながら
-                  <br />
-                  クルージング！
+              ),
+              buttonText: 'ツアー詳細',
+              buttonLink: '/plan',
+            },
+            {
+              imagePath: 'home/plan_sup.jpg',
+              heading: (
+                <Heading size={{ base: 'lg', lg: 'xl' }} textAlign='center'>
+                  SUP & Cafe
+                </Heading>
+              ),
+              content: (
+                <Text
+                  size={{ base: 'md', md: 'lg', lg: 'xl' }}
+                  wordBreak='keep-all'
+                  overflowWrap='anywhere'
+                  fontWeight={600}
+                >
+                  Tabibito cafe の軽食付きツアーです。
                 </Text>
-              </>
-            ),
-            buttonText: 'プランを見る',
-          },
-        ].map((plan, index) => (
-          <PlanCard
-            key={index}
-            imagePath={plan.imagePath}
-            heading={plan.heading}
-            content={plan.content}
-            buttonText={plan.buttonText}
-          />
-        ))}
+              ),
+              buttonText: 'ツアー詳細',
+              buttonLink: '/plan',
+            },
+          ].map((plan, i) => (
+            <PlanCard
+              key={`${plan.heading}-${i}`}
+              variant='summary'
+              imagePath={plan.imagePath}
+              heading={plan.heading}
+              content={plan.content}
+              buttonText={plan.buttonText}
+              buttonLink={plan.buttonLink}
+            />
+          ))}
+        </Flex>
       </Flex>
     </VStack>
   );

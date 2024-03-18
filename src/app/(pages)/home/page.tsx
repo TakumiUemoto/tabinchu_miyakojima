@@ -8,7 +8,7 @@ import { HomeMain } from './templates/homeMain';
 import { HomeAbout } from './templates/homeAbout';
 import { HomePlan } from './templates/homePlan';
 import { HomeReservation } from './templates/homeReservation';
-import { HomeQuestion } from './templates/homeQuestion';
+// import { HomeQuestion } from './templates/homeQuestion';
 import { HomeContact } from './templates/homeContact';
 import { NextPage } from 'next/types';
 
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         <HomeAbout />
         <HomePlan />
         <HomeReservation />
-        <HomeQuestion />
+        {/* <HomeQuestion /> */}
         <HomeContact />
       </Flex>
     </VStack>

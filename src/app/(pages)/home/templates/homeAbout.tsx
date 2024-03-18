@@ -1,12 +1,13 @@
 import { InstagramButton } from '@/components/molecules/InstagramButton';
-import { Center, Heading, Button, Text, Flex, VStack } from '@chakra-ui/react';
+import { Center, Button, Text, Flex, VStack, Link } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 export const HomeAbout: React.FC = () => {
   return (
     <VStack w='full'>
-      <Heading fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}>About</Heading>
-      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}>
-        たびんちゅ宮古島
+      {/* <Heading fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}>About</Heading> */}
+      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} mb='1rem'>
+        たびんちゅ宮古島について
       </Text>
 
       <Center display='flex' flexDir='column' gap='1.5rem' w='full'>
@@ -38,10 +39,14 @@ export const HomeAbout: React.FC = () => {
           gap='1rem'
           w={{ base: '80%', md: '70%', lg: '60%' }}
         >
-          <Button colorScheme='teal' size='lg' w='full'>
-            たびんちゅ宮古島について
-          </Button>
-          <InstagramButton w='full' />
+          <NextLink href='/about' passHref>
+            <Button colorScheme='teal' size='lg' w={300}>
+              たびんちゅ宮古島について
+            </Button>
+          </NextLink>
+          <Link href={process.env.NEXT_PUBLIC_INSTAGRAM} isExternal>
+            <InstagramButton />
+          </Link>
         </Flex>
       </Center>
     </VStack>
