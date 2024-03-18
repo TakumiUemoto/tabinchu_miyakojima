@@ -1,81 +1,113 @@
-import { VStack, Heading, Text, Grid } from '@chakra-ui/react';
+import {
+  VStack,
+  Text,
+  Flex,
+  UnorderedList,
+  ListItem,
+  Box,
+} from '@chakra-ui/react';
 import { StepCard } from '@/components/organisms/StepCard';
 
 export const HomeReservation: React.FC = () => {
   return (
     <VStack w='full'>
-      <Heading fontSize='3xl'>Reservation</Heading>
-      <Text fontSize='4xl'>予約方法</Text>
-      <Grid
-        templateColumns={{ base: '1fr', lg: 'repeat(4, 1fr)' }}
+      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}>
+        予約からツアー当日の流れ
+      </Text>
+
+      <Flex
+        justify='center'
+        align='center'
         w='full'
-        gap='1.5rem'
+        flexWrap='wrap'
+        gap={{ base: '1rem', md: '3rem' }}
       >
         {[
           {
-            id: 1,
-            title: '予約情報の入力',
+            title: '①予約情報の確認',
             content: (
-              <Text>
-                ボタン押下で公式LINEが開きます。
+              <Text fontWeight={600}>
+                Time Tree にて
                 <br />
-                予約日のご選択、お客様情報のご入力をお願いいたします。
+                ご予約状況を確認できます。
+                <br />
+                <br />
+                予約可能であれば、⭕️が表示されます。
               </Text>
             ),
-            button: '予約する',
+            button: '予約状況',
             hasButton: true,
-            hasNext: true,
           },
           {
-            id: 2,
-            title: '仮予約完了',
+            title: '②公式LINEから予約',
             content: (
-              <Text>
-                情報を入力後はまだ仮予約の状態です。
+              <>
+                <Text
+                  fontWeight={600}
+                  wordBreak='keep-all'
+                  overflowWrap='anywhere'
+                >
+                  公式LINEから
+                  <wbr />
+                  予約を受け付けています。
+                </Text>
                 <br />
-                スタッフが予約当日の天気、予約状況を確認でき次第、メッセージをお送りします。
-              </Text>
+                <Text fontWeight={600} color='red'>
+                  ※スタッフからの予約確定の連絡を受け予約確定とします。
+                </Text>
+              </>
             ),
-            hasButton: false,
-            hasNext: true,
+            button: '公式LINE',
+            hasButton: true,
           },
           {
-            id: 3,
-            title: '本予約完了',
+            title: '③前日の確認連絡',
             content: (
-              <Text>
-                スタッフから本予約完了のご連絡をお送りします。
+              <>
+                <Text fontWeight={600}>
+                  前日の夕方を目安に
+                  <br />
+                  <span style={{ color: 'red' }}>お電話</span>
+                  での打ち合わせを行います。
+                </Text>
                 <br />
-                ツアー時間、当日の天気、注意事項をお伝えします。
-              </Text>
+                <Text>（内容）</Text>
+                <UnorderedList>
+                  <ListItem>時間</ListItem>
+                  <ListItem>集合場所</ListItem>
+                  <ListItem>ツアーの事前打ち合わせ</ListItem>
+                </UnorderedList>
+              </>
             ),
             hasButton: false,
-            hasNext: true,
           },
           {
-            id: 4,
-            title: '予約当日',
+            title: '④予約当日',
             content: (
-              <Text>
-                予約当日は予約時間に合わせてお越しください。
-                <br />
-                緊急の連絡等は電話で直接お願いいたします。
-              </Text>
+              <VStack textAlign='center'>
+                <Box fontWeight={600}>
+                  現地集合！
+                  <Text>↓</Text>
+                  <Text color='red'>オーダーメイドツアー</Text>
+                  <Text>↓</Text>
+                  <Text>現地解散！</Text>
+                  <br />
+                  <Text>ありがとうございました。</Text>
+                </Box>
+              </VStack>
             ),
             hasButton: false,
-            hasNext: false,
           },
         ].map((item, i) => (
           <StepCard
-            key={`${item.id}-${i}`}
-            stepNum={item.id}
+            key={`${item.title}-${i}`}
             titleText={item.title}
             content={item.content}
             buttonText={item.button}
             hasButton={item.hasButton}
           />
         ))}
-      </Grid>
+      </Flex>
     </VStack>
   );
 };

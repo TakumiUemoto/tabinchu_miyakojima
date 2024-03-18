@@ -1,5 +1,6 @@
 'use client';
 
+import { PageLinkList } from '@/lib/constant';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Image } from '@chakra-ui/image';
 import { Flex, Link } from '@chakra-ui/layout';
@@ -10,7 +11,6 @@ import {
   DrawerCloseButton,
   DrawerBody,
   useDisclosure,
-  Text,
   Box,
   Divider,
 } from '@chakra-ui/react';
@@ -30,34 +30,32 @@ export const Header: React.FC = () => {
         position='fixed'
         top='0'
         w='full'
-        p='0.5rem 1rem'
+        h={{ base: '80px', md: '100px' }}
+        p='0 1rem 0 0'
         zIndex={100}
         bg='rgba(255, 255, 255, 0.5)'
       >
-        <Flex align='center' gap='1rem'>
-          <Image
-            src='tabinchu_logo.jpg'
-            borderRadius='full'
-            boxSize={{ base: '32px', md: '48px' }}
-            alt='tabinchu_logo'
-          />
-        </Flex>
+        <Image
+          src='logo_transparent.jpg'
+          borderRadius='full'
+          boxSize={{ base: '120px', md: '150px' }}
+          alt='logo_transparent'
+        />
 
-        <Flex gap='2rem' display={{ base: 'none', md: 'flex' }}>
-          {[
-            { path: '/', text: 'Home' },
-            { path: '/about', text: 'About' },
-            { path: '/plan', text: 'プラン・料金' },
-            { path: '/question', text: 'よくある質問' },
-            { path: '/contact', text: 'お問い合わせ' },
-          ].map((link) => {
+        <Flex
+          display={{ base: 'none', lg: 'flex' }}
+          justify='space-between'
+          gap='1rem'
+          w='auto'
+        >
+          {PageLinkList.map((link, i) => {
             return (
               <Link
+                key={`${link.path}-${i}`}
                 as={NextLink}
                 fontWeight='bold'
                 color={path === link.path ? '#000' : 'gray.700'}
                 href={link.path}
-                key={link.path}
               >
                 {link.text}
               </Link>
@@ -103,12 +101,12 @@ export const Header: React.FC = () => {
                   </Box>
                 );
               })}
-              <Link as={NextLink} href={process.env.NEXT_PUBLIC_INSTAGRAM}>
+              {/* <Link as={NextLink} href={process.env.NEXT_PUBLIC_INSTAGRAM}>
                 <Flex justify='center' align='center' gap='0.5rem'>
                   <FaInstagram fontSize='1.5rem' />
                   <Text fontWeight='bold'>Instagram</Text>
                 </Flex>
-              </Link>
+              </Link> */}
             </Flex>
           </DrawerBody>
         </DrawerContent>

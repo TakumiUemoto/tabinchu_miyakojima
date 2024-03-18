@@ -1,7 +1,13 @@
-import { Button, Card, CardHeader, Heading, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Card,
+  CardHeader,
+  Heading,
+  VStack,
+} from '@chakra-ui/react';
 
 type StepCardProps = {
-  stepNum: number;
   titleText: string;
   content: React.ReactNode;
   buttonText?: string;
@@ -9,34 +15,33 @@ type StepCardProps = {
 };
 
 export const StepCard: React.FC<StepCardProps> = (props) => {
-  const { stepNum, titleText, content, hasButton, buttonText } = props;
+  const { titleText, content, hasButton, buttonText } = props;
   return (
-    <Card w='full' minH='300px' pb='1rem'>
+    <Card
+      w='400px'
+      pb='1rem'
+      borderRadius='1rem'
+      bgColor='rgba(239, 239, 239, 0.25)'
+    >
       <CardHeader
         bgColor='#000'
         opacity={0.8}
-        p='0.5rem'
-        borderRadius='0.5rem 0.5rem 0 0'
+        p='1rem'
+        borderRadius='1rem 1rem 0 0'
       >
         <Heading
           color='white'
-          fontSize='2xl'
+          fontSize={{ base: 'xl', md: '2xl' }}
           textAlign='center'
-        >{`STEP${stepNum}`}</Heading>
-      </CardHeader>
-
-      <VStack p='1rem'>
-        <Heading
-          fontSize='2xl'
-          p='1rem'
-          textDecoration='underline'
-          textUnderlineOffset='0.5rem'
         >
           {titleText}
         </Heading>
-        {content}
+      </CardHeader>
+
+      <VStack minH='240px' justify='space-between' px='1rem'>
+        <Box mt='1rem'>{content}</Box>
         {hasButton && (
-          <Button size='md' w={{ base: '75%', md: '50%' }}>
+          <Button colorScheme='blackAlpha' size='md' w='full'>
             {buttonText}
           </Button>
         )}

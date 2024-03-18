@@ -1,12 +1,12 @@
 import { InstagramButton } from '@/components/molecules/InstagramButton';
-import { Center, Heading, Button, Text, Flex, VStack } from '@chakra-ui/react';
+import { Center, Button, Text, Flex, VStack } from '@chakra-ui/react';
 
 export const HomeAbout: React.FC = () => {
   return (
     <VStack w='full'>
-      <Heading fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}>About</Heading>
+      {/* <Heading fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}>About</Heading> */}
       <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}>
-        たびんちゅ宮古島
+        たびんちゅ宮古島について
       </Text>
 
       <Center display='flex' flexDir='column' gap='1.5rem' w='full'>
