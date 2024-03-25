@@ -1,16 +1,15 @@
-import { FaChevronRight } from 'react-icons/fa';
-import {
-  Flex,
-  Heading,
-  VStack,
-  Link,
-  Text,
-  Box,
-  Divider,
-} from '@chakra-ui/react';
+import { Flex, Heading, VStack, Link, Text } from '@chakra-ui/react';
 import { Image } from '@chakra-ui/image';
 
 import useMediaQuery from '@/lib/hooks/useMediaQuery';
+
+const links = [
+  { title: 'Q & A', href: '#' },
+  {
+    title: '利用規約・キャンセルポリシー',
+    href: '#',
+  },
+];
 
 export const Footer: React.FC = () => {
   const isMobile = useMediaQuery('(max-width: 650px)');
@@ -34,26 +33,21 @@ export const Footer: React.FC = () => {
           <Heading size='lg' mb='0.5rem'>
             たびんちゅ宮古島
           </Heading>
-          <Flex justify='center' flexDir='row'>
-            {[
-              { title: 'Q & A', href: '#', hasDivider: true },
-              {
-                title: '利用規約・キャンセルポリシー',
-                href: '#',
-                hasDivider: false,
-              },
-            ].map((link) => (
-              <Box key={link.title} fontWeight={600}>
-                <Flex
-                  justify={{ base: 'space-between', md: 'center' }}
-                  align='center'
-                >
-                  <Link href={link.href}>{link.title}</Link>
-                  {link.hasDivider && !isMobile && <Text mx='0.5rem'>|</Text>}
-                  {isMobile && <FaChevronRight />}
-                </Flex>
-                {isMobile && <Divider my='0.25rem' />}
-              </Box>
+          <Flex
+            justify='center'
+            textAlign='center'
+            flexDir={{ base: 'column', sm: 'row' }}
+            gap={{ base: '1rem', sm: '0' }}
+          >
+            {links.map((link, i) => (
+              <Flex key={link.title} justify='center'>
+                <Link fontWeight='bold' href={link.href}>
+                  {link.title}
+                </Link>
+                {!isMobile && links.length !== i + 1 && (
+                  <Text mx='1.5rem'>/</Text>
+                )}
+              </Flex>
             ))}
           </Flex>
           <small>&copy;2024 たびんちゅ宮古島</small>

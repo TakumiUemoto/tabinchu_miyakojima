@@ -61,7 +61,7 @@ export const HomePlan: React.FC = () => {
               imagePath: 'home/plan_sup.jpg',
               heading: (
                 <Heading size={{ base: 'lg', lg: 'xl' }} textAlign='center'>
-                  SUP & Cafe
+                  SUP & ピクニック
                 </Heading>
               ),
               content: (

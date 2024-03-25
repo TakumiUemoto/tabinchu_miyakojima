@@ -103,7 +103,7 @@ export const HomeAbout: React.FC = () => {
             作ることができます！
           </Text>
 
-          {windowWidth === 'base' ? (
+          {windowWidth === 'md' ? (
             <Image src='home/about_tour.png' alt='about_tour' mt='1rem' />
           ) : (
             <Image src='home/about_tour_mini.png' alt='about_tour' mt='1rem' />
