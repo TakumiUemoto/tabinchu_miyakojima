@@ -96,15 +96,9 @@ export const Header: React.FC = () => {
           <DrawerCloseButton />
           <DrawerBody py='2rem'>
             <Flex justify='center' flexDir='column' textAlign='center'>
-              {[
-                { path: '/', text: 'Home' },
-                { path: '/about', text: 'About' },
-                { path: '/plan', text: 'プラン・料金' },
-                { path: '/question', text: 'よくある質問' },
-                { path: '/contact', text: 'お問い合わせ' },
-              ].map((link) => {
+              {PageLinkList.map((link, i) => {
                 return (
-                  <Box key={link.path}>
+                  <Box key={`${link.path}-${i}`}>
                     <Link
                       as={NextLink}
                       fontWeight='bold'
@@ -113,16 +107,10 @@ export const Header: React.FC = () => {
                     >
                       {link.text}
                     </Link>
-                    <Divider my='0.25rem' />
+                    <Divider my='1rem' />
                   </Box>
                 );
               })}
-              {/* <Link as={NextLink} href={process.env.NEXT_PUBLIC_INSTAGRAM}>
-                <Flex justify='center' align='center' gap='0.5rem'>
-                  <FaInstagram fontSize='1.5rem' />
-                  <Text fontWeight='bold'>Instagram</Text>
-                </Flex>
-              </Link> */}
             </Flex>
           </DrawerBody>
         </DrawerContent>

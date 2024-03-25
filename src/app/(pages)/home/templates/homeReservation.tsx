@@ -11,7 +11,11 @@ import { StepCard } from '@/components/organisms/StepCard';
 export const HomeReservation: React.FC = () => {
   return (
     <VStack w='full'>
-      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} mb='1rem'>
+      <Text
+        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+        mb='1rem'
+        fontWeight='bold'
+      >
         予約からツアー当日の流れ
       </Text>
 
@@ -70,7 +74,7 @@ export const HomeReservation: React.FC = () => {
                   前日の夕方を目安に
                   <br />
                   <span style={{ color: 'red' }}>お電話</span>
-                  での打ち合わせを行います。
+                  での打ち合わせ。
                 </Text>
                 <br />
                 <Text>（内容）</Text>

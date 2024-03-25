@@ -23,11 +23,11 @@ const Home: NextPage = () => {
         gap='4rem'
         w={{ base: 'full', md: '90%', lg: '80%' }}
         p={{ base: 0, md: '1rem', lg: '2rem' }}
+        mb='4rem'
       >
         <HomeAbout />
         <HomePlan />
         <HomeReservation />
-        {/* <HomeQuestion /> */}
         <HomeContact />
       </Flex>
     </VStack>

@@ -5,7 +5,11 @@ export const HomeQuestion: React.FC = () => {
   return (
     <VStack gap='1rem'>
       {/* <Heading fontSize='3xl'>Q&A</Heading> */}
-      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} mb='1rem'>
+      <Text
+        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+        mb='1rem'
+        fontWeight='bold'
+      >
         よくあるご質問
       </Text>
 

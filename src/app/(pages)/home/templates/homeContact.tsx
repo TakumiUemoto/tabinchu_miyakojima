@@ -5,7 +5,11 @@ export const HomeContact: React.FC = () => {
   return (
     <VStack w='full' justify='center'>
       {/* <Heading fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}>Contact</Heading> */}
-      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} mb='1rem'>
+      <Text
+        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+        mb='1rem'
+        fontWeight='bold'
+      >
         お問い合わせ
       </Text>
       <ImageCard imagePath='home/contact.jpg'>
