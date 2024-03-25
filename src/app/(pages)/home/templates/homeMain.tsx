@@ -25,7 +25,7 @@ export const HomeMain: React.FC = () => {
         src='logo_text_skeleton.jpg'
         objectFit='cover'
         borderRadius='full'
-        boxSize={{ base: '350px', md: '400px' }}
+        boxSize={{ base: '250px', sm: '300px', md: '350px' }}
         alt='logo_text_skeleton'
         mt={{ base: '-1rem', md: '3rem' }}
       />

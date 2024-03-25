@@ -30,15 +30,15 @@ export const Header: React.FC = () => {
         position='fixed'
         top='0'
         w='full'
-        h={{ base: '80px', md: '100px' }}
+        h={{ base: '60px', md: '80px' }}
         p='0 1rem 0 0'
         zIndex={100}
-        bg='rgba(232, 232, 232, 1.0)'
+        bg='rgba(200, 200, 200, 0.85)'
       >
         <Image
           src='logo_text_skeleton.jpg'
           borderRadius='full'
-          boxSize={{ base: '80px', md: '100px' }}
+          boxSize={{ base: '60px', md: '80px' }}
           alt='logo_text_skeleton'
         />
 
