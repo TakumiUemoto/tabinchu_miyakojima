@@ -35,12 +35,15 @@ export const Header: React.FC = () => {
         zIndex={100}
         bg='rgba(200, 200, 200, 0.85)'
       >
-        <Image
-          src='logo_text_skeleton.jpg'
-          borderRadius='full'
-          boxSize={{ base: '60px', md: '80px' }}
-          alt='logo_text_skeleton'
-        />
+        <Link as={NextLink} href='/home'>
+          <Image
+            src='logo_text_skeleton.jpg'
+            borderRadius='full'
+            width={{ base: '70px', md: '90px' }}
+            height={{ base: '60px', md: '80px' }}
+            alt='logo_text_skeleton'
+          />
+        </Link>
 
         <Flex
           display={{ base: 'none', md: 'flex' }}
@@ -75,15 +78,15 @@ export const Header: React.FC = () => {
             <Image
               src='instagram.jpg'
               borderRadius='full'
-              boxSize='2rem'
+              boxSize={{ base: '3rem', md: '4rem' }}
               alt='instagram'
             />
           </Link>
 
           <HamburgerIcon
             display={{ base: 'flex', md: 'none' }}
-            width={{ base: '1.5rem', md: '2rem' }}
-            height={{ base: '1.5rem', md: '2rem' }}
+            width='3rem'
+            height='3rem'
             onClick={onOpen}
             alignItems='center'
           />
@@ -104,6 +107,7 @@ export const Header: React.FC = () => {
                       fontWeight='bold'
                       color={path === link.path ? '#000' : 'gray.700'}
                       href={link.path}
+                      onClick={onClose}
                     >
                       {link.text}
                     </Link>
