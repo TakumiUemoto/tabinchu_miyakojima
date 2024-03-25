@@ -37,11 +37,11 @@ export const PlanCard: React.FC<PlanCardProps> = ({
     <Card overflow='hidden' variant='outline' w='full' {...rest}>
       {variant === 'summary' ? (
         <VStack
-          justify='center'
+          justify='space-evenly'
           align='center'
           w='full'
           h='full'
-          px='3rem'
+          px='0.5rem'
           backgroundImage={`linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(${imagePath})`}
           backgroundSize='cover'
           backgroundPosition='center'
@@ -49,7 +49,7 @@ export const PlanCard: React.FC<PlanCardProps> = ({
           color='#fff'
           minH={{ base: 400, md: 500 }}
         >
-          <VStack my='3rem'>
+          <VStack my='2rem'>
             {heading}
             {content}
           </VStack>

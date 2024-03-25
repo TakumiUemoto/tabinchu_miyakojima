@@ -4,7 +4,11 @@ import { VStack, Heading, Flex, Text } from '@chakra-ui/react';
 export const HomePlan: React.FC = () => {
   return (
     <VStack w='full'>
-      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} mb='1rem'>
+      <Text
+        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+        mb='1rem'
+        fontWeight='bold'
+      >
         ツアー内容
       </Text>
 
@@ -18,10 +22,10 @@ export const HomePlan: React.FC = () => {
               ),
               content: (
                 <Text
-                  size={{ base: 'md', md: 'lg', lg: 'xl' }}
+                  size={{ base: 'lg', md: 'xl', lg: '2xl' }}
                   wordBreak='keep-all'
                   overflowWrap='anywhere'
-                  fontWeight={600}
+                  fontWeight='bold'
                 >
                   ライフジャケットを着用します。
                   <br />
@@ -40,10 +44,10 @@ export const HomePlan: React.FC = () => {
               ),
               content: (
                 <Text
-                  size={{ base: 'md', md: 'lg', lg: 'xl' }}
+                  size={{ base: 'lg', md: 'xl', lg: '2xl' }}
                   wordBreak='keep-all'
                   overflowWrap='anywhere'
-                  fontWeight={600}
+                  fontWeight='bold'
                 >
                   ライフジャケットなしで泳げる
                   <br />
@@ -62,10 +66,8 @@ export const HomePlan: React.FC = () => {
               ),
               content: (
                 <Text
-                  size={{ base: 'md', md: 'lg', lg: 'xl' }}
-                  wordBreak='keep-all'
-                  overflowWrap='anywhere'
-                  fontWeight={600}
+                  size={{ base: 'lg', md: 'xl', lg: '2xl' }}
+                  fontWeight='bold'
                 >
                   Tabibito cafe の軽食付きツアーです。
                 </Text>
