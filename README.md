@@ -5,9 +5,17 @@
 - パッケージ管理
   - npm@10.1.0
   - node@20.9.0
+  
 - 主要 F/W
+  ─ next@14.1.0
 
-  - Next.js@14.1.0
+  ─ react@18.2.0
+  ─ typescript@5.3.3
+
+  ─ @chakra-ui/react@2.8.2
+
+  ─ husky@8.0.3
+  ─ prettier@3.2.5
 
 ## 環境構築
 
