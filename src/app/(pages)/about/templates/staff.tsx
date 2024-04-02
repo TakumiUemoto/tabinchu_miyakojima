@@ -21,7 +21,7 @@ export const Staff: React.FC = () => {
             <Image
               src='about/staff_hiroki.jpg'
               borderRadius='50%'
-              boxSize='300px'
+              boxSize={{ base: '200px', sm: '300px' }}
               alt='staff'
             />
             <Text fontSize='2xl' fontWeight='bold'>
@@ -35,7 +35,7 @@ export const Staff: React.FC = () => {
               wordBreak='keep-all'
               overflowWrap='anywhere'
               textAlign='left'
-              px='0.5rem'
+              px={{ base: '1rem', md: '0.5rem' }}
             >
               水中カメラマンのヒロキです！
               <br />
@@ -88,7 +88,7 @@ export const Staff: React.FC = () => {
             <Image
               src='about/staff_charlie.jpg'
               borderRadius='50%'
-              boxSize='300px'
+              boxSize={{ base: '200px', sm: '300px' }}
               alt='staff'
             />
             <Text fontSize='2xl' fontWeight='bold'>
@@ -102,7 +102,7 @@ export const Staff: React.FC = () => {
               wordBreak='keep-all'
               overflowWrap='anywhere'
               textAlign='left'
-              px='0.5rem'
+              px={{ base: '1rem', md: '0.5rem' }}
             >
               初めまして。チャーリーです。
               <br />
