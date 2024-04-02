@@ -64,7 +64,7 @@ export const HomeReservation: React.FC = () => {
             ),
             button: '公式LINE',
             hasButton: true,
-            buttonColorScheme: 'green',
+            buttonColorScheme: 'whatsapp',
           },
           {
             title: '③前日の確認連絡',
