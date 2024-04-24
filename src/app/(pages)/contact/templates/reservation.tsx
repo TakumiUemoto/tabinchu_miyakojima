@@ -1,4 +1,4 @@
-import { Button, VStack, Text, Box } from '@chakra-ui/react';
+import { Button, VStack, Text, Box, Flex, Image } from '@chakra-ui/react';
 
 export const Reservation: React.FC = () => {
   return (
@@ -12,9 +12,72 @@ export const Reservation: React.FC = () => {
       </Text>
 
       <Box p='2rem'>
-        <Button colorScheme='whatsapp' size='lg' w='160px'>
-          公式LINE
-        </Button>
+        <Text
+          wordBreak='keep-all'
+          overflowWrap='anywhere'
+          textAlign='center'
+          fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+          fontWeight='bold'
+          textDecoration='underline'
+          textDecorationThickness='0.5rem'
+          textDecorationColor='red'
+          textUnderlineOffset='-0.2rem'
+          sx={{ textDecorationSkipInk: 'none' }}
+        >
+          予約・お問合せは公式LINEからお願いします。
+          <br />
+          予約の前に予約状況を確認して
+          <wbr />
+          連絡していただけますと、
+          <br />
+          予約がスムーズになるため大変助かります。
+        </Text>
+
+        <Flex
+          justify='space-between'
+          gap='3rem'
+          flexDir={{ base: 'column', md: 'row' }}
+          mt='2rem'
+        >
+          <Flex
+            flexDir='column'
+            justifyContent='flex-start'
+            alignItems='center'
+            gap='1.5rem'
+          >
+            <Button colorScheme='linkedin' size='lg' w='160px'>
+              予約状況
+            </Button>
+            <Image
+              src='contact/reservation_status.jpg'
+              alt='contact/reservation_status'
+              w={{ base: '250px', md: '300px', lg: '400px' }}
+            />
+          </Flex>
+
+          <Flex
+            flexDir='column'
+            justifyContent='flex-start'
+            alignItems='center'
+            gap='1.5rem'
+          >
+            <Button colorScheme='whatsapp' size='lg' w='160px'>
+              公式LINE
+            </Button>
+            <Image
+              src='contact/line_1.jpg'
+              alt='contact/line_1'
+              w={{ base: '90%', md: '300px', lg: '400px' }}
+              objectFit='cover'
+            />
+            <Image
+              src='contact/line_2.jpg'
+              alt='contact/line_2'
+              w={{ base: '90%', md: '300px', lg: '400px' }}
+              objectFit='cover'
+            />
+          </Flex>
+        </Flex>
       </Box>
     </VStack>
   );
