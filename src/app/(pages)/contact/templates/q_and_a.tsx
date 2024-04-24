@@ -29,18 +29,13 @@ export const QandA: React.FC = () => {
         Q & A
       </Text>
 
-      <Flex flexDir='column' gap='1.5rem' px='1rem'>
-        <Template title='当日何を持っていけばよいですか？​'>
-          <Box>
-            <Text>
-              タオル・着替え・飲み物・ツアー代金があれば問題ございません。
-            </Text>
-            <Text>
-              着替えの際テントをご用意しておりますが、ポンチョなどがあればよりスムーズに着替えられると思われます。
-            </Text>
-          </Box>
-        </Template>
-
+      <Flex
+        flexDir='column'
+        gap='1.5rem'
+        p='4rem'
+        bgColor='rgba(214,230,245,0.5)'
+        borderRadius='5rem'
+      >
         <Template title='ツアーの集合場所はどこですか？'>
           <Box>
             <Text>
@@ -51,6 +46,42 @@ export const QandA: React.FC = () => {
             </Text>
             <Text>
               その際はツアー直前に集合時間・場所を変更する場合もございますので、あらかじめご了承ください。
+            </Text>
+          </Box>
+        </Template>
+
+        <Template title='写真はツアー料金に含まれていますか？'>
+          <Box>
+            <Text>はい、写真代はツアー料金に含まれております。</Text>
+            <Text>ツアー後の清算の際に写真をお渡しします。</Text>
+            <Text>
+              iPhoneの方はAir
+              DropでAndroidの方はギガファイル便で当日中にはお送りいたします。
+            </Text>
+            <Text>
+              追加料金にはなりますが、カメラマンヒロキによる、写真編集（レタッチ）を2,000円で承っています。クオリティが上がりますので是非!
+            </Text>
+            <Text>詳細につきましてはツアー当日にご質問ください。</Text>
+          </Box>
+        </Template>
+
+        <Template title='1人でも貸切になりますか？'>
+          <Box>
+            <Text>はい、お一人様でも貸切オーダーメイドツアーとなります。</Text>
+          </Box>
+        </Template>
+
+        <Template title='泳げないのですが、参加は可能ですか？​'>
+          <Box>
+            <Text>はい、ツアーの参加は可能です。</Text>
+            <Text>
+              ライフジャケットを着用するシュノーケルをオススメいたします!
+            </Text>
+            <Text>
+              浮力を確保しながら泳ぐので、泳ぎやすく呼吸もしやすいです。
+            </Text>
+            <Text>
+              顔に水をつけるのも抵抗がある方は、SUPをオススメいたします!
             </Text>
           </Box>
         </Template>
@@ -66,6 +97,18 @@ export const QandA: React.FC = () => {
           </Box>
         </Template>
 
+        <Template title='シャワーはありますか？​'>
+          <Box>
+            <Text>簡易的なシャワーですが、ご用意しています。</Text>
+            <Text>
+              お着替えの前に海水を洗い流す形です。シャンプーなどはございません。
+            </Text>
+            <Text>
+              Instagramのハイライトにシャワーの動画があるのでご覧になっていただけるとイメージがつきやすいかと思います。
+            </Text>
+          </Box>
+        </Template>
+
         <Template title='ツアー参加するにあたっての制限はありますか？'>
           <Box>
             <Text>
@@ -73,16 +116,6 @@ export const QandA: React.FC = () => {
             </Text>
             <Text>年齢制限：</Text>
             <Text>重大な疾患：</Text>
-          </Box>
-        </Template>
-
-        <Template title='1人でも貸切になりますか？'>
-          <Box>
-            <Text>はい、お一人様でも貸切オーダーメイドツアーとなります。</Text>
-            <Text>
-              しかし、お一人様での参加ですと追加料金をいただいております。
-            </Text>
-            <Text>ご了承の程、よろしくお願いします。</Text>
           </Box>
         </Template>
 
@@ -100,6 +133,38 @@ export const QandA: React.FC = () => {
             <Text>天候に左右される旨、あらかじめご了承ください。</Text>
           </Box>
         </Template>
+
+        <Template title='当日何を持っていけばよいですか？​'>
+          <Box>
+            <Text>
+              タオル・着替え・飲み物・ツアー代金があれば問題ございません。
+            </Text>
+            <Text>
+              着替えの際テントをご用意しておりますが、ポンチョなどがあればよりスムーズに着替えられると思われます。
+            </Text>
+          </Box>
+        </Template>
+
+        <Template title='支払い方法は何がありますか？'>
+          <Box>
+            <Text>現金での前払いとなっております。</Text>
+            <Text>ツアー当日までに現金のご用意をお願いいたします。</Text>
+            <Text>現金での支払いが難しい場合はご相談ください。</Text>
+          </Box>
+        </Template>
+
+        <Text
+          wordBreak='keep-all'
+          overflowWrap='anywhere'
+          textAlign='center'
+          fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+          fontWeight='bold'
+          pt='1rem'
+        >
+          他に不明な点がございましたら、
+          <wbr />
+          公式LINEにお問合せください!
+        </Text>
       </Flex>
     </VStack>
   );
