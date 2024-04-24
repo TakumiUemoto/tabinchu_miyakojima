@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import { Flex } from '@chakra-ui/react';
 import { QandA } from './templates/q_and_a';
 import { Reservation } from './templates/reservation';
-import { TeamsOfUse } from './templates/teams_of_use';
+import { TeamsOfServices } from './templates/teams_of_services';
 import { CancelPolicy } from './templates/cancel_policy';
 
 const Contact: NextPage = () => {
@@ -10,8 +10,8 @@ const Contact: NextPage = () => {
     <Flex flexDir='column' gap='3rem' pt='5rem'>
       <Reservation />
       <QandA />
-      <TeamsOfUse />
       <CancelPolicy />
+      <TeamsOfServices />
     </Flex>
   );
 };
