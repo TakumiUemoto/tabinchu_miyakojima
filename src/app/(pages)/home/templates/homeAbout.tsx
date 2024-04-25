@@ -1,22 +1,27 @@
-import {
-  Center,
-  Text,
-  Flex,
-  VStack,
-  Image,
-  useBreakpointValue,
-} from '@chakra-ui/react';
+import { Center, Text, Flex, VStack, Image } from '@chakra-ui/react';
+import { useState, useEffect } from 'react';
 
 export const HomeAbout: React.FC = () => {
-  const imageRender = useBreakpointValue(
-    {
-      base: 'home/about_tour_mini.png',
-      md: 'home/about_tour.png',
-    },
-    {
-      ssr: false,
-    }
-  );
+  const [imageRender, setImageRender] = useState('home/about_tour.png');
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 768) {
+        setImageRender('home/about_tour_mini.png');
+      } else {
+        setImageRender('home/about_tour.png');
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <VStack w='full'>
