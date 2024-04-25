@@ -22,7 +22,7 @@ export const HomeMain: React.FC = () => {
       className={styles.main}
     >
       <Image
-        src='logo_text_skeleton.jpg'
+        src='logo/skeleton_text.jpg'
         objectFit='cover'
         borderRadius='full'
         boxSize={{ base: '250px', sm: '250px', md: '300px' }}

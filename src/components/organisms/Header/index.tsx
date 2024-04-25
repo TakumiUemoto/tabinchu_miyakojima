@@ -37,7 +37,7 @@ export const Header: React.FC = () => {
       >
         <Link as={NextLink} href='/home'>
           <Image
-            src='logo_text_skeleton.jpg'
+            src='logo/skeleton_text.jpg'
             borderRadius='full'
             width={{ base: '70px', md: '90px' }}
             height={{ base: '60px', md: '80px' }}
@@ -76,7 +76,7 @@ export const Header: React.FC = () => {
         <Flex align='center' gap='1rem'>
           <Link as={NextLink} href={process.env.NEXT_PUBLIC_INSTAGRAM}>
             <Image
-              src='instagram.jpg'
+              src='logo/instagram.jpg'
               borderRadius='full'
               boxSize={{ base: '3rem', md: '4rem' }}
               alt='instagram'
