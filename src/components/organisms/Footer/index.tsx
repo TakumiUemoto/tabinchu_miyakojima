@@ -25,12 +25,12 @@ export const Footer: React.FC = () => {
       >
         <Image
           src='logo.jpg'
-          boxSize={{ base: '150px', md: '200px' }}
+          boxSize={{ base: '50px', md: '80px' }}
           alt='logo'
         />
 
         <VStack flex={1}>
-          <Heading size='lg' mb='0.5rem'>
+          <Heading size='md' mb='0.5rem'>
             たびんちゅ宮古島
           </Heading>
           <Flex
