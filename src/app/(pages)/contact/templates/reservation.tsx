@@ -16,7 +16,7 @@ export const Reservation: React.FC = () => {
           wordBreak='keep-all'
           overflowWrap='anywhere'
           textAlign='center'
-          fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+          fontSize={{ base: 'lg', lg: 'xl' }}
           fontWeight='bold'
           textDecoration='underline'
           textDecorationThickness='0.5rem'

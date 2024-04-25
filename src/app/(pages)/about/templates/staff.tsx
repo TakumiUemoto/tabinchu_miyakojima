@@ -17,11 +17,12 @@ export const Staff: React.FC = () => {
             align='center'
             flexDir='column'
             w={{ base: 'full', lg: '30%' }}
+            gap='1.5rem'
           >
             <Image
               src='about/staff_hiroki.jpg'
               borderRadius='50%'
-              boxSize={{ base: '200px', sm: '300px' }}
+              boxSize={{ base: '200px', sm: '250px' }}
               alt='staff'
             />
             <Text fontSize='2xl' fontWeight='bold'>
@@ -29,9 +30,9 @@ export const Staff: React.FC = () => {
             </Text>
           </Flex>
 
-          <Box w={{ base: 'full', lg: '70%' }}>
+          <Box w={{ base: 'full', lg: '70%' }} mt='1.5rem'>
             <Text
-              fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+              fontSize={{ base: 'md' }}
               wordBreak='keep-all'
               overflowWrap='anywhere'
               textAlign='left'
@@ -84,11 +85,12 @@ export const Staff: React.FC = () => {
             align='center'
             flexDir='column'
             w={{ base: 'full', lg: '30%' }}
+            gap='1.5rem'
           >
             <Image
               src='about/staff_charlie.jpg'
               borderRadius='50%'
-              boxSize={{ base: '200px', sm: '300px' }}
+              boxSize={{ base: '200px', sm: '250px' }}
               alt='staff'
             />
             <Text fontSize='2xl' fontWeight='bold'>
@@ -96,9 +98,9 @@ export const Staff: React.FC = () => {
             </Text>
           </Flex>
 
-          <Box w={{ base: 'full', lg: '70%' }}>
+          <Box w={{ base: 'full', lg: '70%' }} mt='1.5rem'>
             <Text
-              fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+              fontSize={{ base: 'md' }}
               wordBreak='keep-all'
               overflowWrap='anywhere'
               textAlign='left'

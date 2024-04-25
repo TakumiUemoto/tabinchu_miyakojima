@@ -16,7 +16,7 @@ export const CancelPolicy: React.FC = () => {
           wordBreak='keep-all'
           overflowWrap='anywhere'
           textAlign='center'
-          fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+          fontSize={{ base: 'lg', lg: 'xl' }}
           fontWeight='bold'
           border='2px solid black'
         >
@@ -30,9 +30,9 @@ export const CancelPolicy: React.FC = () => {
           wordBreak='keep-all'
           overflowWrap='anywhere'
           textAlign='left'
-          fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+          fontSize={{ base: 'md' }}
           textDecoration='underline wavy'
-          textDecorationThickness='0.1rem'
+          textDecorationThickness='0.05rem'
           textDecorationColor='red'
           pt='1.5rem'
         >
@@ -45,7 +45,7 @@ export const CancelPolicy: React.FC = () => {
           wordBreak='keep-all'
           overflowWrap='anywhere'
           textAlign='left'
-          fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+          fontSize={{ base: 'md' }}
         >
           ※飲酒した状態でのツアーのご参加はできません。
           <br />
