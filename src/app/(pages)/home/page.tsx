@@ -8,9 +8,9 @@ import { HomeMain } from './templates/homeMain';
 import { HomeAbout } from './templates/homeAbout';
 import { HomePlan } from './templates/homePlan';
 import { HomeReservation } from './templates/homeReservation';
-// import { HomeQuestion } from './templates/homeQuestion';
 import { HomeContact } from './templates/homeContact';
 import { NextPage } from 'next/types';
+import HomePhotoGallery from './templates/homePhotoGallery';
 
 const Home: NextPage = () => {
   return (
@@ -28,6 +28,7 @@ const Home: NextPage = () => {
         <HomeAbout />
         <HomePlan />
         <HomeReservation />
+        <HomePhotoGallery />
         <HomeContact />
       </Flex>
     </VStack>
