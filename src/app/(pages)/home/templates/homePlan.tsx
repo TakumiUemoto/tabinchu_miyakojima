@@ -13,7 +13,7 @@ export const HomePlan: React.FC = () => {
       </Text>
 
       <Flex flexDir='column' w='full'>
-        <Flex flexDir={{ base: 'column', '2xl': 'row' }} gap='2rem'>
+        <Flex flexDir={{ base: 'column' }} gap='2rem'>
           {[
             {
               imagePath: 'home/plan_snorkel.jpg',

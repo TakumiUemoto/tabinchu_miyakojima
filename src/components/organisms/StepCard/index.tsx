@@ -26,10 +26,11 @@ export const StepCard: React.FC<StepCardProps> = (props) => {
   } = props;
   return (
     <Card
-      w='400px'
+      w='350px'
       pb='1rem'
       borderRadius='1rem'
       bgColor='rgba(239, 239, 239, 0.25)'
+      border='1px solid black'
     >
       <CardHeader
         bgColor='#000'
