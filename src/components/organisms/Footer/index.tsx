@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
         p='1rem 3rem'
       >
         <Image
-          src='logo.jpg'
+          src='logo/skeleton_text.jpg'
           boxSize={{ base: '50px', md: '80px' }}
           alt='logo'
         />
