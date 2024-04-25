@@ -157,7 +157,7 @@ export const QandA: React.FC = () => {
           wordBreak='keep-all'
           overflowWrap='anywhere'
           textAlign='center'
-          fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+          fontSize={{ base: 'xl', lg: '2xl' }}
           fontWeight='bold'
           pt='1rem'
         >

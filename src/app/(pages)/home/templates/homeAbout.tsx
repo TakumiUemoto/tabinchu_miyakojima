@@ -1,24 +1,23 @@
-import { Center, Text, Flex, VStack, Image } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
+import {
+  Center,
+  Text,
+  Flex,
+  VStack,
+  Image,
+  useBreakpointValue,
+} from '@chakra-ui/react';
 
 export const HomeAbout: React.FC = () => {
-  const [windowWidth, setWindowWidth] = useState('md');
+  const imageRender = useBreakpointValue(
+    {
+      base: 'home/about_tour_mini.png',
+      md: 'home/about_tour.png',
+    },
+    {
+      ssr: false,
+    }
+  );
 
-  useEffect(() => {
-    const handleResize: () => void = () => {
-      if (window.innerWidth < 768) {
-        setWindowWidth('md');
-      } else {
-        setWindowWidth('base');
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
   return (
     <VStack w='full'>
       <Center display='flex' flexDir='column' gap='1.5rem' w='full'>
@@ -56,11 +55,12 @@ export const HomeAbout: React.FC = () => {
             作ることができます！
           </Text>
 
-          {windowWidth === 'md' ? (
-            <Image src='home/about_tour.png' alt='about_tour' mt='1rem' />
-          ) : (
-            <Image src='home/about_tour_mini.png' alt='about_tour' mt='1rem' />
-          )}
+          <Image
+            src={imageRender}
+            alt={imageRender?.split('.')[0]}
+            mt='1rem'
+            maxW={{ base: '80%', lg: '70%' }}
+          />
         </Flex>
       </Center>
     </VStack>

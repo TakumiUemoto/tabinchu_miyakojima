@@ -22,7 +22,7 @@ export const HomeReservation: React.FC = () => {
       <Flex
         justify='center'
         align='center'
-        w='full'
+        w={{ base: 'full', lg: '90%' }}
         flexWrap='wrap'
         gap={{ base: '1rem', md: '3rem' }}
       >
@@ -30,7 +30,7 @@ export const HomeReservation: React.FC = () => {
           {
             title: '①予約情報の確認',
             content: (
-              <Text fontWeight={600}>
+              <Text fontSize='xl' fontWeight='bold'>
                 Time Tree にて
                 <br />
                 ご予約状況を確認できます。
@@ -48,7 +48,8 @@ export const HomeReservation: React.FC = () => {
             content: (
               <>
                 <Text
-                  fontWeight={600}
+                  fontSize='xl'
+                  fontWeight='bold'
                   wordBreak='keep-all'
                   overflowWrap='anywhere'
                 >
@@ -57,8 +58,10 @@ export const HomeReservation: React.FC = () => {
                   予約を受け付けています。
                 </Text>
                 <br />
-                <Text fontWeight={600} color='red'>
-                  ※スタッフからの予約確定の連絡を受け予約確定とします。
+                <Text fontSize='lg' fontWeight='bold' color='red'>
+                  ※スタッフからの予約確定の
+                  <br />
+                  連絡を受け予約確定とします。
                 </Text>
               </>
             ),
@@ -70,7 +73,7 @@ export const HomeReservation: React.FC = () => {
             title: '③前日の確認連絡',
             content: (
               <>
-                <Text fontWeight={600}>
+                <Text fontSize='xl' fontWeight='bold'>
                   前日の夕方を目安に
                   <br />
                   <span style={{ color: 'red' }}>お電話</span>
@@ -78,7 +81,7 @@ export const HomeReservation: React.FC = () => {
                 </Text>
                 <br />
                 <Text>（内容）</Text>
-                <UnorderedList>
+                <UnorderedList fontSize='xl' fontWeight='bold'>
                   <ListItem>時間</ListItem>
                   <ListItem>集合場所</ListItem>
                   <ListItem>ツアーの事前打ち合わせ</ListItem>
@@ -91,7 +94,7 @@ export const HomeReservation: React.FC = () => {
             title: '④予約当日',
             content: (
               <VStack textAlign='center'>
-                <Box fontWeight={600}>
+                <Box fontSize='xl' fontWeight='bold'>
                   現地集合！
                   <Text>↓</Text>
                   <Text color='red'>オーダーメイドツアー</Text>

@@ -1,4 +1,4 @@
-import { HStack, Text, Image } from '@chakra-ui/react';
+import { Text, Image, Flex } from '@chakra-ui/react';
 
 export const Shop: React.FC = () => {
   return (
@@ -10,32 +10,38 @@ export const Shop: React.FC = () => {
         wordBreak='keep-all'
         overflowWrap='anywhere'
         textAlign='center'
-        fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+        fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+        textDecoration='underline'
+        textDecorationThickness='0.5rem'
+        textDecorationColor='yellow'
+        textUnderlineOffset='-0.2rem'
+        sx={{ textDecorationSkipInk: 'none' }}
         px='1rem'
       >
         たびんちゅ 宮古島は
         <wbr />
-        2024年5月にOPEN！
+        2024年5月にOPEN!
         <br />
         20代で脱サラした旅人2人が運営する
         <wbr />
         マリンショップです。
       </Text>
 
-      <HStack
-        justify='space-evenly'
-        align='flex-start'
+      <Flex
+        justify='space-between'
+        align={{ base: 'center', md: 'flex-start' }}
         my='2.5rem'
-        flexDir={{ base: 'column', sm: 'row' }}
+        gap='1.5rem'
+        flexDir={{ base: 'column', md: 'row' }}
       >
         <Image
           src='about/about.png'
           alt='about'
-          boxSize={{ base: '100%', sm: '30%' }}
+          w={{ base: '300px', lg: '350px' }}
           objectFit='cover'
         />
         <Text
-          fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+          fontSize={{ base: 'md' }}
           wordBreak='keep-all'
           overflowWrap='anywhere'
           textAlign='center'
@@ -83,7 +89,7 @@ export const Shop: React.FC = () => {
           <wbr />
           と呼んでいます。
         </Text>
-      </HStack>
+      </Flex>
     </>
   );
 };

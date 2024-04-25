@@ -30,7 +30,7 @@ export const PlanCard: React.FC<PlanCardProps> = ({
   content,
   buttonText,
   buttonLink,
-  buttonColorScheme = 'blackAlpha',
+  buttonColorScheme = 'gray',
   ...rest
 }) => {
   return (
@@ -49,13 +49,17 @@ export const PlanCard: React.FC<PlanCardProps> = ({
           color='#fff'
           minH={{ base: 400, md: 500 }}
         >
-          <VStack my='2rem'>
+          <VStack display='flex' gap='2rem' my='2rem'>
             {heading}
             {content}
           </VStack>
 
           <Link as={NextLink} href={buttonLink}>
-            <Button colorScheme={buttonColorScheme} w={{ base: '250px' }}>
+            <Button
+              colorScheme={buttonColorScheme}
+              size='lg'
+              w={{ base: '250px' }}
+            >
               {buttonText}
             </Button>
           </Link>

@@ -21,7 +21,7 @@ export const HomeContact: React.FC = () => {
           color='white'
           fontWeight='bold'
         >
-          <Text fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}>
+          <Text fontSize={{ base: 'lg', lg: 'xl' }}>
             ツアーのご質問やご相談、
             <br />
             その他お問い合わせがございましたら
@@ -30,7 +30,7 @@ export const HomeContact: React.FC = () => {
           <Button colorScheme='green' w='50%'>
             公式LINE
           </Button>
-          <Text fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}>
+          <Text fontSize={{ base: 'lg', lg: 'xl' }}>
             公式LINEアカウントにてお問い合わせください！
           </Text>
         </Flex>

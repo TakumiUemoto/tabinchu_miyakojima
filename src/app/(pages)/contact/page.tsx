@@ -9,8 +9,8 @@ const Contact: NextPage = () => {
   return (
     <Flex flexDir='column' gap='3rem' pt='5rem'>
       <Reservation />
-      <QandA />
       <CancelPolicy />
+      <QandA />
       <TeamsOfServices />
     </Flex>
   );
