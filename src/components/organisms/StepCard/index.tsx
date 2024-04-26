@@ -4,7 +4,7 @@ import {
   ButtonProps,
   Card,
   CardHeader,
-  Heading,
+  Text,
   Link,
   VStack,
 } from '@chakra-ui/react';
@@ -41,13 +41,14 @@ export const StepCard: React.FC<StepCardProps> = (props) => {
         p='1rem'
         borderRadius='1rem 1rem 0 0'
       >
-        <Heading
+        <Text
           color='white'
           fontSize={{ base: 'xl', md: '2xl' }}
+          fontWeight='bold'
           textAlign='center'
         >
           {titleText}
-        </Heading>
+        </Text>
       </CardHeader>
 
       <VStack minH='240px' justify='space-between' px='1rem'>

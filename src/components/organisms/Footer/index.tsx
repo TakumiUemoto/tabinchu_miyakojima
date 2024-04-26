@@ -1,4 +1,4 @@
-import { Flex, Heading, VStack, Link, Text } from '@chakra-ui/react';
+import { Flex, VStack, Link, Text } from '@chakra-ui/react';
 import { Image } from '@chakra-ui/image';
 
 import useMediaQuery from '@/lib/hooks/useMediaQuery';
@@ -30,9 +30,14 @@ export const Footer: React.FC = () => {
         />
 
         <VStack flex={1}>
-          <Heading size='md' mb='0.5rem'>
+          <Text
+            fontSize={{ base: 'lg', md: 'xl' }}
+            fontWeight='bold'
+            size='md'
+            mb='0.5rem'
+          >
             たびんちゅ宮古島
-          </Heading>
+          </Text>
           <Flex
             justify='center'
             textAlign='center'

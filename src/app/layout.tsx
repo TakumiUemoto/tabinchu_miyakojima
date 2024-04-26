@@ -1,8 +1,14 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
+import localFont from 'next/font/local';
 
 import type { Metadata } from 'next';
 import './globals.css';
+
+const font = localFont({
+  src: './font/Mamelon-4HiRegular.woff2',
+  display: 'swap',
+});
 
 const siteName = '宮古島マリンショップ たびんちゅ宮古島';
 const description = 'たびんちゅ宮古島の説明だよ。';
@@ -35,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ja'>
-      <body>
+      <body className={`${font.className}`}>
         <ChakraProvider cssVarsRoot='body'>{children}</ChakraProvider>
       </body>
     </html>

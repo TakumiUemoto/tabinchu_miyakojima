@@ -1,13 +1,5 @@
 import { Image } from '@chakra-ui/image';
-import {
-  Center,
-  Button,
-  Text,
-  Flex,
-  Heading,
-  VStack,
-  Link,
-} from '@chakra-ui/react';
+import { Center, Button, Text, Flex, VStack, Link } from '@chakra-ui/react';
 
 import styles from './templates.module.scss';
 
@@ -32,6 +24,7 @@ export const HomeMain: React.FC = () => {
       <VStack>
         <Text
           fontSize={{ base: 'sm', sm: 'lg', md: 'xl', lg: '2xl' }}
+          fontWeight='bold'
           w='auto'
           p='0.25rem'
           wordBreak='keep-all'
@@ -43,7 +36,7 @@ export const HomeMain: React.FC = () => {
           <wbr />
           cafeを営む旅人が運営しています。
         </Text>
-        <Heading
+        <Text
           fontSize={{ base: 'lg', sm: '2xl', md: '3xl', lg: '4xl' }}
           w='auto'
           p='0.25rem'
@@ -53,7 +46,7 @@ export const HomeMain: React.FC = () => {
           bg='rgba(0,0,0, 0.35)'
         >
           『1組貸切 オーダーメイドツアー』
-        </Heading>
+        </Text>
       </VStack>
 
       <Flex

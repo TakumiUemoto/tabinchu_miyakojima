@@ -5,11 +5,7 @@ import NextLink from 'next/link';
 export const TourProcess: React.FC = () => {
   return (
     <VStack flexDir='column' gap='3rem' pt='5rem'>
-      <Text
-        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
-        mb='1rem'
-        fontWeight='bold'
-      >
+      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='bold'>
         🏖 ツアーの流れ 🤿
       </Text>
 

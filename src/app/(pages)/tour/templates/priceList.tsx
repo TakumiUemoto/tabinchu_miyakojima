@@ -24,12 +24,8 @@ export const PriceList: React.FC = () => {
   }, []);
 
   return (
-    <VStack flexDir='column' gap='3rem' pt='8rem'>
-      <Text
-        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
-        mb='1rem'
-        fontWeight='bold'
-      >
+    <VStack flexDir='column' pt='8rem' mb='1rem'>
+      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='bold'>
         料金表
       </Text>
       <Flex
@@ -37,9 +33,8 @@ export const PriceList: React.FC = () => {
         textAlign='right'
         fontSize={{ base: 'lg', md: 'xl' }}
         fontWeight='bold'
-        gap='1.5rem'
-        py={{ base: '2rem', md: '4rem' }}
-        px={{ base: '2rem', md: '4rem' }}
+        gap='1rem'
+        p={{ base: '1rem 2rem', md: '2rem 4rem' }}
         w={{ base: '90%', sm: 'fit-content' }}
         bgColor='rgba(214,230,245,0.5)'
         borderRadius={{ base: '2.5rem', md: '5rem' }}
@@ -65,12 +60,30 @@ export const PriceList: React.FC = () => {
           </>
         ) : (
           <>
-            <Text>🤿 シュノーケル 🤿 ・・・・・・・・・・・・・・ 8,000円</Text>
-            <Text>
-              🏊 スキンダイビング 🏊 ・・・・・・・・・・・・・ 9,000円
-            </Text>
-            <Text>🏄 SUP 🏄 ・・・・・・・・・・・・・・・・ 8,000円</Text>
-            <Text>📸 画像編集 📸 ・・・・・・・・・・・・・・・ 2,000円</Text>
+            <Flex justify='space-between' gap='1rem'>
+              <Text textAlign='center' w='15rem'>
+                🤿 シュノーケル 🤿{' '}
+              </Text>
+              <Text>・・・&nbsp;&nbsp;&nbsp;8,000円</Text>
+            </Flex>
+            <Flex justify='space-between' gap='1rem'>
+              <Text textAlign='center' w='15rem'>
+                🏊 スキンダイビング 🏊
+              </Text>
+              <Text>・・・&nbsp;&nbsp;&nbsp;9,000円</Text>
+            </Flex>
+            <Flex justify='space-between' gap='1rem'>
+              <Text textAlign='center' w='15rem'>
+                🏄 SUP 🏄
+              </Text>
+              <Text>・・・&nbsp;&nbsp;&nbsp;8,000円 </Text>
+            </Flex>
+            <Flex justify='space-between' gap='1rem'>
+              <Text textAlign='center' w='15rem'>
+                📸 画像編集 📸
+              </Text>
+              <Text>・・・&nbsp;&nbsp;&nbsp;2,000円</Text>
+            </Flex>
           </>
         )}
       </Flex>
@@ -80,7 +93,9 @@ export const PriceList: React.FC = () => {
         align='center'
         flexWrap={{ base: 'wrap', md: 'nowrap' }}
         flexDir={{ base: 'column', sm: 'row' }}
+        gap='1rem'
         w={{ base: 'full' }}
+        mt='1rem'
       >
         <Image
           src='tour/snorkel.jpg'
