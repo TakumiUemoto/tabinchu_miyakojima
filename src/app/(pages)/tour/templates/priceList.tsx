@@ -26,7 +26,7 @@ export const PriceList: React.FC = () => {
   return (
     <VStack flexDir='column' gap='3rem' pt='8rem'>
       <Text
-        fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mb='1rem'
         fontWeight='bold'
       >
@@ -85,17 +85,17 @@ export const PriceList: React.FC = () => {
         <Image
           src='tour/snorkel.jpg'
           alt='tour/snorkel'
-          maxW={{ base: '80%', sm: '280px', md: '30%', lg: '25%' }}
+          maxW={{ base: '90%', sm: '280px', md: '30%', lg: '25%' }}
         />
         <Image
           src='tour/skin_diving.jpg'
           alt='tour/skin_diving'
-          maxW={{ base: '80%', sm: '280px', md: '30%', lg: '25%' }}
+          maxW={{ base: '90%', sm: '280px', md: '30%', lg: '25%' }}
         />
         <Image
           src='tour/sup.jpg'
           alt='tour/sup'
-          maxW={{ base: '80%', sm: '280px', md: '30%', lg: '25%' }}
+          maxW={{ base: '90%', sm: '280px', md: '30%', lg: '25%' }}
         />
       </Flex>
     </VStack>

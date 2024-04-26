@@ -4,7 +4,7 @@ export const Reservation: React.FC = () => {
   return (
     <VStack>
       <Text
-        fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mb='1rem'
         fontWeight='bold'
       >

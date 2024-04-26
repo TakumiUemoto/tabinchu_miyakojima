@@ -1,10 +1,12 @@
-import { VStack, Text, Flex, Button } from '@chakra-ui/react';
+import { VStack, Text, Flex, Button, Link } from '@chakra-ui/react';
+
+import NextLink from 'next/link';
 
 export const TourProcess: React.FC = () => {
   return (
     <VStack flexDir='column' gap='3rem' pt='5rem'>
       <Text
-        fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mb='1rem'
         fontWeight='bold'
       >
@@ -63,9 +65,11 @@ export const TourProcess: React.FC = () => {
         </Text>
 
         <Flex justify='center'>
-          <Button w='15rem' colorScheme='linkedin' size='lg'>
-            予約・問い合わせ
-          </Button>
+          <Link as={NextLink} href='/contact'>
+            <Button w='15rem' colorScheme='linkedin' size='lg'>
+              予約・問い合わせ
+            </Button>
+          </Link>
         </Flex>
       </Flex>
     </VStack>

@@ -3,7 +3,7 @@ import { Flex, Divider, Box, Image, Text } from '@chakra-ui/react';
 export const Staff: React.FC = () => {
   return (
     <>
-      <Text fontSize='4xl' fontWeight='bold'>
+      <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='bold'>
         スタッフ紹介
       </Text>
       <Box mb='4rem'>

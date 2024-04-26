@@ -3,7 +3,11 @@ import { Text, Image, Flex } from '@chakra-ui/react';
 export const Shop: React.FC = () => {
   return (
     <>
-      <Text fontSize='4xl' mt='8rem' fontWeight='bold'>
+      <Text
+        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+        mt='8rem'
+        fontWeight='bold'
+      >
         ショップ紹介
       </Text>
       <Text

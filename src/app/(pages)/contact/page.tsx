@@ -7,7 +7,7 @@ import { CancelPolicy } from './templates/cancel_policy';
 
 const Contact: NextPage = () => {
   return (
-    <Flex flexDir='column' gap='3rem' pt='5rem'>
+    <Flex flexDir='column' gap='3rem' pt='8rem'>
       <Reservation />
       <CancelPolicy />
       <QandA />
