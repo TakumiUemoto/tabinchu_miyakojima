@@ -11,7 +11,13 @@ export const ImageCard: React.FC<ImageCardProps> = ({
   ...rest
 }) => {
   return (
-    <Card overflow='hidden' variant='outline' w='full' {...rest}>
+    <Card
+      overflow='hidden'
+      variant='outline'
+      w='full'
+      borderRadius='1.5rem'
+      {...rest}
+    >
       <Center
         backgroundImage={`linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(${imagePath})`}
         backgroundSize='cover'

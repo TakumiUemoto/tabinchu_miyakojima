@@ -5,8 +5,8 @@ export const TeamsOfServices: React.FC = () => {
     <VStack>
       <Text
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
-        mb='1rem'
         fontWeight='bold'
+        mb='1rem'
       >
         利用規約
       </Text>
@@ -15,7 +15,7 @@ export const TeamsOfServices: React.FC = () => {
         flexDir='column'
         gap='1.5rem'
         w={{ base: '90%', md: '70%' }}
-        p={{ base: '1.5rem', md: '4rem', lg: '6rem' }}
+        px={{ base: '1.5rem', md: '4rem', lg: '6rem' }}
       >
         <Text textAlign='left' fontSize={{ base: 'md' }}>
           ①心臓に持病のある方、てんかんや意識喪失など起こしたことのある方、
