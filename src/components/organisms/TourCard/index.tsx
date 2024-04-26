@@ -13,7 +13,7 @@ import {
 
 import NextLink from 'next/link';
 
-type PlanCardProps = Omit<CardProps, 'content'> & {
+type TourCardProps = Omit<CardProps, 'content'> & {
   variant: 'summary' | 'detail';
   imagePath: string;
   heading: React.ReactNode;
@@ -23,7 +23,7 @@ type PlanCardProps = Omit<CardProps, 'content'> & {
   buttonColorScheme?: ButtonProps['colorScheme'];
 };
 
-export const PlanCard: React.FC<PlanCardProps> = ({
+export const TourCard: React.FC<TourCardProps> = ({
   variant,
   imagePath,
   heading,
