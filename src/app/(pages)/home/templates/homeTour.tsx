@@ -1,7 +1,7 @@
-import { PlanCard } from '@/components/organisms/PlanCard';
+import { TourCard } from '@/components/organisms/TourCard';
 import { VStack, Flex, Text } from '@chakra-ui/react';
 
-export const HomePlan: React.FC = () => {
+export const HomeTour: React.FC = () => {
   return (
     <VStack w='full'>
       <Text
@@ -16,7 +16,7 @@ export const HomePlan: React.FC = () => {
         <Flex flexDir={{ base: 'column' }} gap='2rem'>
           {[
             {
-              imagePath: 'home/plan_snorkel.jpg',
+              imagePath: 'home/tour_snorkel.jpg',
               heading: (
                 <Text fontSize={{ base: '3xl', md: '5xl' }} fontWeight='bold'>
                   シュノーケル
@@ -33,10 +33,10 @@ export const HomePlan: React.FC = () => {
                 </Text>
               ),
               buttonText: 'ツアー詳細',
-              buttonLink: '/plan',
+              buttonLink: '/tour',
             },
             {
-              imagePath: 'home/plan_skin.jpg',
+              imagePath: 'home/tour_skin.jpg',
               heading: (
                 <Text fontSize={{ base: '3xl', md: '5xl' }} fontWeight='bold'>
                   スキンダイビング
@@ -53,10 +53,10 @@ export const HomePlan: React.FC = () => {
                 </Text>
               ),
               buttonText: 'ツアー詳細',
-              buttonLink: '/plan',
+              buttonLink: '/tour',
             },
             {
-              imagePath: 'home/plan_sup.jpg',
+              imagePath: 'home/tour_sup.jpg',
               heading: (
                 <Text fontSize={{ base: '4xl', md: '6xl' }} fontWeight='bold'>
                   S U P
@@ -71,17 +71,17 @@ export const HomePlan: React.FC = () => {
                 </Text>
               ),
               buttonText: 'ツアー詳細',
-              buttonLink: '/plan',
+              buttonLink: '/tour',
             },
-          ].map((plan, i) => (
-            <PlanCard
-              key={`${plan.heading}-${i}`}
+          ].map((tour, i) => (
+            <TourCard
+              key={`${tour.heading}-${i}`}
               variant='summary'
-              imagePath={plan.imagePath}
-              heading={plan.heading}
-              content={plan.content}
-              buttonText={plan.buttonText}
-              buttonLink={plan.buttonLink}
+              imagePath={tour.imagePath}
+              heading={tour.heading}
+              content={tour.content}
+              buttonText={tour.buttonText}
+              buttonLink={tour.buttonLink}
             />
           ))}
         </Flex>

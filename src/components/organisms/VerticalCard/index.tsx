@@ -21,7 +21,7 @@ export const VerticalCard: React.FC<VerticalCardProps> = (props) => {
   return (
     <Card overflow='hidden' variant='outline'>
       <Image
-        alt='Show All Plan'
+        alt='Show All Tour'
         src={imagePath}
         objectFit='cover'
         w='80dvw'

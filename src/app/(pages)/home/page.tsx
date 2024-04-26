@@ -6,7 +6,7 @@ import { Flex, VStack } from '@chakra-ui/react';
 
 import { HomeMain } from './templates/homeMain';
 import { HomeAbout } from './templates/homeAbout';
-import { HomePlan } from './templates/homePlan';
+import { HomeTour } from './templates/homeTour';
 import { HomeReservation } from './templates/homeReservation';
 import { HomeContact } from './templates/homeContact';
 import { NextPage } from 'next/types';
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         mb='4rem'
       >
         <HomeAbout />
-        <HomePlan />
+        <HomeTour />
         <HomeReservation />
         <HomePhotoGallery />
         <HomeContact />
