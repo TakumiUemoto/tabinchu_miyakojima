@@ -1,10 +1,14 @@
-import { TourCard } from '@/components/organisms/TourCard';
+'use client';
+
 import type { NextPage } from 'next/types';
+import { PriceList } from './templates/priceList';
+import { TourProcess } from './templates/tourProcess';
 
 const Tour: NextPage = () => {
   return (
     <>
-      <TourCard variant='detail' imagePath='' heading={<></>} content={<></>} />
+      <PriceList />
+      <TourProcess />
     </>
   );
 };
