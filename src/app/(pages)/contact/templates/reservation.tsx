@@ -1,4 +1,5 @@
-import { Button, VStack, Text, Box, Flex, Image } from '@chakra-ui/react';
+import { Button, VStack, Text, Box, Flex, Image, Link } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 export const Reservation: React.FC = () => {
   return (
@@ -45,9 +46,12 @@ export const Reservation: React.FC = () => {
             alignItems='center'
             gap='1.5rem'
           >
-            <Button colorScheme='linkedin' size='lg' w='160px'>
-              予約状況
-            </Button>
+            <Link as={NextLink} href={process.env.NEXT_PUBLIC_TIMETREE}>
+              <Button colorScheme='linkedin' size='lg' w='160px'>
+                予約状況
+              </Button>
+            </Link>
+
             <Image
               src='contact/reservation_status.jpg'
               alt='contact/reservation_status'
@@ -61,9 +65,11 @@ export const Reservation: React.FC = () => {
             alignItems='center'
             gap='1.5rem'
           >
-            <Button colorScheme='whatsapp' size='lg' w='160px'>
-              公式LINE
-            </Button>
+            <Link as={NextLink} href={process.env.NEXT_PUBLIC_LINE}>
+              <Button colorScheme='whatsapp' size='lg' w='160px'>
+                公式LINE
+              </Button>
+            </Link>
             <Image
               src='contact/line_1.jpg'
               alt='contact/line_1'

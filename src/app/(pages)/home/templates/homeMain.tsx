@@ -25,7 +25,7 @@ export const HomeMain: React.FC = () => {
         src='logo/skeleton_text.jpg'
         objectFit='cover'
         borderRadius='full'
-        boxSize={{ base: '250px', sm: '250px', md: '300px' }}
+        boxSize={{ base: '200px', sm: '250px', md: '300px' }}
         alt='logo_text_skeleton'
         mt={{ base: '-1rem', md: '3rem' }}
       />
@@ -64,12 +64,12 @@ export const HomeMain: React.FC = () => {
         bg='rgba(0,0,0, 0.35)'
       >
         <Link href={process.env.NEXT_PUBLIC_TIMETREE} isExternal>
-          <Button colorScheme='whiteAlpha' size='lg' w='full'>
+          <Button colorScheme='whiteAlpha' size='lg' w='15rem'>
             予約状況
           </Button>
         </Link>
         <Link href={process.env.NEXT_PUBLIC_LINE} isExternal>
-          <Button colorScheme='whiteAlpha' size='lg' w='full'>
+          <Button colorScheme='whiteAlpha' size='lg' w='15rem'>
             予約・問い合わせ
           </Button>
         </Link>

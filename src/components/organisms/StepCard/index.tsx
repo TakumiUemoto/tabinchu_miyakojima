@@ -5,24 +5,27 @@ import {
   Card,
   CardHeader,
   Heading,
+  Link,
   VStack,
 } from '@chakra-ui/react';
+
+import NextLink from 'next/link';
 
 export type StepCardProps = {
   titleText: string;
   content: React.ReactNode;
   buttonText?: string;
-  hasButton: boolean;
   buttonColorScheme?: ButtonProps['colorScheme'];
+  link: 'time_tree' | 'line' | 'none';
 };
 
 export const StepCard: React.FC<StepCardProps> = (props) => {
   const {
     titleText,
     content,
-    hasButton,
     buttonText,
     buttonColorScheme = 'blackAlpha',
+    link,
   } = props;
   return (
     <Card
@@ -49,10 +52,20 @@ export const StepCard: React.FC<StepCardProps> = (props) => {
 
       <VStack minH='240px' justify='space-between' px='1rem'>
         <Box mt='1rem'>{content}</Box>
-        {hasButton && (
-          <Button colorScheme={buttonColorScheme} size='md' w='full'>
-            {buttonText}
-          </Button>
+        {link === 'none' && <></>}
+        {link === 'line' && (
+          <Link as={NextLink} href={process.env.NEXT_PUBLIC_LINE}>
+            <Button colorScheme={buttonColorScheme} size='md' w='15rem'>
+              {buttonText}
+            </Button>
+          </Link>
+        )}
+        {link === 'time_tree' && (
+          <Link as={NextLink} href={process.env.NEXT_PUBLIC_TIMETREE}>
+            <Button colorScheme={buttonColorScheme} size='md' w='15rem'>
+              {buttonText}
+            </Button>
+          </Link>
         )}
       </VStack>
     </Card>

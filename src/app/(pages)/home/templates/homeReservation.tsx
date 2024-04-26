@@ -6,7 +6,7 @@ import {
   ListItem,
   Box,
 } from '@chakra-ui/react';
-import { StepCard } from '@/components/organisms/StepCard';
+import { StepCard, StepCardProps } from '@/components/organisms/StepCard';
 
 export const HomeReservation: React.FC = () => {
   return (
@@ -40,8 +40,8 @@ export const HomeReservation: React.FC = () => {
               </Text>
             ),
             button: '予約状況',
-            hasButton: true,
             buttonColorScheme: 'orange',
+            link: 'time_tree',
           },
           {
             title: '②公式LINEから予約',
@@ -66,8 +66,8 @@ export const HomeReservation: React.FC = () => {
               </>
             ),
             button: '公式LINE',
-            hasButton: true,
             buttonColorScheme: 'whatsapp',
+            link: 'line',
           },
           {
             title: '③前日の確認連絡',
@@ -88,7 +88,7 @@ export const HomeReservation: React.FC = () => {
                 </UnorderedList>
               </>
             ),
-            hasButton: false,
+            link: 'none',
           },
           {
             title: '④予約当日',
@@ -105,7 +105,7 @@ export const HomeReservation: React.FC = () => {
                 </Box>
               </VStack>
             ),
-            hasButton: false,
+            link: 'none',
           },
         ].map((item, i) => (
           <StepCard
@@ -113,8 +113,8 @@ export const HomeReservation: React.FC = () => {
             titleText={item.title}
             content={item.content}
             buttonText={item.button}
-            hasButton={item.hasButton}
             buttonColorScheme={item.buttonColorScheme}
+            link={item.link as StepCardProps['link']}
           />
         ))}
       </Flex>

@@ -1,5 +1,6 @@
 import { ImageCard } from '@/components/organisms/ImageCard';
-import { VStack, Button, Text, Flex } from '@chakra-ui/react';
+import { VStack, Button, Text, Flex, Link } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 export const HomeContact: React.FC = () => {
   return (
@@ -27,11 +28,13 @@ export const HomeContact: React.FC = () => {
             その他お問い合わせがございましたら
           </Text>
 
-          <Button colorScheme='green' w='50%'>
-            公式LINE
-          </Button>
+          <Link as={NextLink} href={process.env.NEXT_PUBLIC_LINE}>
+            <Button colorScheme='green' w='15rem'>
+              公式LINE
+            </Button>
+          </Link>
           <Text fontSize={{ base: 'lg', lg: 'xl' }}>
-            公式LINEアカウントにてお問い合わせください！
+            公式LINEアカウントにてお問い合わせください!
           </Text>
         </Flex>
       </ImageCard>

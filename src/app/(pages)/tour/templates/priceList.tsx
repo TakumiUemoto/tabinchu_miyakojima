@@ -35,30 +35,30 @@ export const PriceList: React.FC = () => {
       <Flex
         flexDir='column'
         textAlign='right'
-        fontSize={{ base: 'xl', md: '2xl' }}
+        fontSize={{ base: 'lg', md: 'xl' }}
         fontWeight='bold'
         gap='1.5rem'
         py={{ base: '2rem', md: '4rem' }}
-        px={{ base: '1rem', md: '4rem' }}
+        px={{ base: '2rem', md: '4rem' }}
         w={{ base: '90%', sm: 'fit-content' }}
         bgColor='rgba(214,230,245,0.5)'
         borderRadius={{ base: '2.5rem', md: '5rem' }}
       >
         {textRender ? (
           <>
-            <Flex justify='space-between'>
+            <Flex justify='space-between' gap='1rem'>
               <Text>🤿 シュノーケル</Text>
               <Text>8,000円</Text>
             </Flex>
-            <Flex justify='space-between'>
+            <Flex justify='space-between' gap='1rem'>
               <Text>🏊 スキンダイビング</Text>
               <Text>9,000円</Text>
             </Flex>
-            <Flex justify='space-between'>
+            <Flex justify='space-between' gap='1rem'>
               <Text>🏄 SUP</Text>
               <Text>8,000円</Text>
             </Flex>
-            <Flex justify='space-between'>
+            <Flex justify='space-between' gap='1rem'>
               <Text>📸 画像編集</Text>
               <Text>2,000円</Text>
             </Flex>
