@@ -2,7 +2,7 @@ import { VStack, Text, Box } from '@chakra-ui/react';
 
 export const CancelPolicy: React.FC = () => {
   return (
-    <VStack>
+    <VStack id='cancel-policy'>
       <Text
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mb='1rem'

@@ -20,7 +20,8 @@ const Template: React.FC<QandAProps> = ({ title, children }) => {
 
 export const QandA: React.FC = () => {
   return (
-    <VStack>
+    // NOTE: ヘッダーの高さ関連のリファクタ要？
+    <VStack id='q_and_a' pt='6rem'>
       <Text
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mb='1rem'

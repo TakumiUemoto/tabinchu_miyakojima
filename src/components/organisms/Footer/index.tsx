@@ -4,10 +4,10 @@ import { Image } from '@chakra-ui/image';
 import useMediaQuery from '@/lib/hooks/useMediaQuery';
 
 const links = [
-  { title: 'Q & A', href: '#' },
+  { title: 'Q & A', href: '/contact#q_and_a' },
   {
-    title: '利用規約・キャンセルポリシー',
-    href: '#',
+    title: '利用規約',
+    href: '/contact#teams_of_services',
   },
 ];
 

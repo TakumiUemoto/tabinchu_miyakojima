@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 
 export const Reservation: React.FC = () => {
   return (
-    <VStack>
+    <VStack id='reservation'>
       <Text
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mb='1rem'

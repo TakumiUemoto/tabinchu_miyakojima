@@ -24,7 +24,7 @@ export const PriceList: React.FC = () => {
   }, []);
 
   return (
-    <VStack flexDir='column' pt='8rem' mb='1rem'>
+    <VStack id='price' flexDir='column' pt='8rem' mb='1rem'>
       <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='bold'>
         料金表
       </Text>

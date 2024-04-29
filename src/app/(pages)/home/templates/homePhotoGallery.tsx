@@ -41,7 +41,7 @@ export const HomePhotoGallery: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <Box id='photo'>
       {isSlider ? (
         <Box mx='0.5rem'>
           <PhotoSlider>
@@ -111,7 +111,7 @@ export const HomePhotoGallery: React.FC = () => {
           </Flex>
         </Flex>
       )}
-    </>
+    </Box>
   );
 };
 export default HomePhotoGallery;

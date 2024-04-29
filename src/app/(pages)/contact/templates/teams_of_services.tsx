@@ -2,7 +2,7 @@ import { Flex, Text, VStack } from '@chakra-ui/react';
 
 export const TeamsOfServices: React.FC = () => {
   return (
-    <VStack>
+    <VStack id='teams_of_services' pt='6rem' pb='4rem'>
       <Text
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         fontWeight='bold'

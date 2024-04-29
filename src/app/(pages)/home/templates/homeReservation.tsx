@@ -10,7 +10,7 @@ import { StepCard, StepCardProps } from '@/components/organisms/StepCard';
 
 export const HomeReservation: React.FC = () => {
   return (
-    <VStack w='full' maxW='6xl'>
+    <VStack id='reservation' w='full' maxW='6xl'>
       <Text
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mb='1rem'

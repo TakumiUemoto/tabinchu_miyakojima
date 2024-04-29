@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 
 export const HomeContact: React.FC = () => {
   return (
-    <VStack w='full' justify='center'>
+    <VStack id='contact' w='full' justify='center'>
       <Text
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mb='1rem'
