@@ -18,6 +18,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({
       borderRadius='1.5rem'
       {...rest}
     >
+      {/* // TODO: ExportedImage置換? */}
       <Center
         backgroundImage={`linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(${imagePath})`}
         backgroundSize='cover'

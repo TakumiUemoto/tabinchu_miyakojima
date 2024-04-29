@@ -1,4 +1,5 @@
-import { Flex, Image, Text, VStack } from '@chakra-ui/react';
+import { Flex, Text, VStack } from '@chakra-ui/react';
+import ExportedImage from 'next-image-export-optimizer';
 import { useState, useEffect } from 'react';
 
 export const PriceList: React.FC = () => {
@@ -91,26 +92,29 @@ export const PriceList: React.FC = () => {
       <Flex
         justify='center'
         align='center'
-        flexWrap={{ base: 'wrap', md: 'nowrap' }}
+        flexWrap={{ base: 'wrap', lg: 'nowrap' }}
         flexDir={{ base: 'column', sm: 'row' }}
-        gap='1rem'
+        gap='1.5rem'
         w={{ base: 'full' }}
         mt='1rem'
       >
-        <Image
+        <ExportedImage
           src='tour/snorkel.jpg'
           alt='tour/snorkel'
-          maxW={{ base: '50%', sm: '250px', md: '25%', lg: '20%' }}
+          width={275}
+          height={600}
         />
-        <Image
+        <ExportedImage
           src='tour/skin_diving.jpg'
           alt='tour/skin_diving'
-          maxW={{ base: '50%', sm: '250px', md: '25%', lg: '20%' }}
+          width={275}
+          height={600}
         />
-        <Image
+        <ExportedImage
           src='tour/sup.jpg'
           alt='tour/sup'
-          maxW={{ base: '50%', sm: '250px', md: '25%', lg: '20%' }}
+          width={275}
+          height={600}
         />
       </Flex>
     </VStack>

@@ -1,4 +1,5 @@
-import { Button, VStack, Text, Box, Flex, Image, Link } from '@chakra-ui/react';
+import { Button, VStack, Text, Box, Flex, Link } from '@chakra-ui/react';
+import ExportedImage from 'next-image-export-optimizer';
 import NextLink from 'next/link';
 
 export const Reservation: React.FC = () => {
@@ -52,10 +53,11 @@ export const Reservation: React.FC = () => {
               </Button>
             </Link>
 
-            <Image
+            <ExportedImage
               src='contact/reservation_status.jpg'
               alt='contact/reservation_status'
-              w={{ base: '250px', md: '300px', lg: '400px' }}
+              width={275}
+              height={500}
             />
           </Flex>
 
@@ -70,17 +72,17 @@ export const Reservation: React.FC = () => {
                 公式LINE
               </Button>
             </Link>
-            <Image
+            <ExportedImage
               src='contact/line_1.jpg'
               alt='contact/line_1'
-              w={{ base: '90%', md: '300px', lg: '400px' }}
-              objectFit='cover'
+              width={300}
+              height={300}
             />
-            <Image
+            <ExportedImage
               src='contact/line_2.jpg'
               alt='contact/line_2'
-              w={{ base: '90%', md: '300px', lg: '400px' }}
-              objectFit='cover'
+              width={300}
+              height={300}
             />
           </Flex>
         </Flex>

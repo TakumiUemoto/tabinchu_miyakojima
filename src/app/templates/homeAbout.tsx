@@ -1,16 +1,20 @@
-import { Center, Text, Flex, VStack, Image } from '@chakra-ui/react';
+import { Center, Text, Flex, VStack } from '@chakra-ui/react';
+import ExportedImage from 'next-image-export-optimizer';
 import { useState, useEffect } from 'react';
 
 export const HomeAbout: React.FC = () => {
-  const [imageRender, setImageRender] = useState('home/about_tour.png');
+  const [imageRender, setImageRender] = useState('top/about_tour.png');
+  const [imageSize, setImageSize] = useState({ width: 650, height: 850 });
 
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 768) {
-        setImageRender('home/about_tour_mini.png');
+        setImageRender('top/about_tour_mini.png');
+        setImageSize({ width: 350, height: 450 });
       } else {
-        setImageRender('home/about_tour.png');
+        setImageRender('top/about_tour.png');
+        setImageSize({ width: 650, height: 850 });
       }
     };
 
@@ -25,8 +29,13 @@ export const HomeAbout: React.FC = () => {
 
   return (
     <VStack id='about' w='full'>
-      <Center display='flex' flexDir='column' gap='1.5rem' w='full'>
-        <Flex justify='center' align='center' flexDir='column'>
+      <Center display='flex' flexDir='column' w='full'>
+        <Flex
+          justify='center'
+          align='center'
+          flexDir='column'
+          gap={{ base: '1.5rem', md: '3rem' }}
+        >
           <Text
             fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
             mb='1rem'
@@ -60,11 +69,13 @@ export const HomeAbout: React.FC = () => {
             作ることができます！
           </Text>
 
-          <Image
+          <ExportedImage
             src={imageRender}
             alt={imageRender?.split('.')[0]}
-            mt='1rem'
-            maxW={{ base: '80%', lg: '70%' }}
+            width={imageSize.width}
+            height={imageSize.height}
+            // mt='1rem'
+            // maxW={{ base: '80%', lg: '70%' }}
           />
         </Flex>
       </Center>

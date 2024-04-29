@@ -2,7 +2,6 @@
 
 import { PageLinkList } from '@/lib/constant';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import { Image } from '@chakra-ui/image';
 import { Flex, Link } from '@chakra-ui/layout';
 import {
   Text,
@@ -15,6 +14,7 @@ import {
   Box,
   Divider,
 } from '@chakra-ui/react';
+import ExportedImage from 'next-image-export-optimizer';
 import NextLink from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -35,13 +35,13 @@ export const Header: React.FC = () => {
         zIndex={100}
         bg='rgba(200, 200, 200, 0.85)'
       >
-        <Link as={NextLink} href='/home'>
-          <Image
-            src='logo/skeleton_text.jpg'
-            borderRadius='full'
-            width={{ base: '70px', md: '90px' }}
-            height={{ base: '60px', md: '80px' }}
-            alt='logo_text_skeleton'
+        <Link as={NextLink} href='/'>
+          <ExportedImage
+            src='logo/skeleton.jpg'
+            width={70}
+            height={70}
+            alt='logo_skeleton'
+            style={{ borderRadius: '50%' }}
           />
         </Link>
 
@@ -75,11 +75,12 @@ export const Header: React.FC = () => {
 
         <Flex align='center' gap='1rem'>
           <Link as={NextLink} href={process.env.NEXT_PUBLIC_INSTAGRAM}>
-            <Image
+            <ExportedImage
               src='logo/instagram.jpg'
-              borderRadius='full'
-              boxSize={{ base: '3rem', md: '4rem' }}
               alt='instagram'
+              width={70}
+              height={70}
+              style={{ borderRadius: '50%' }}
             />
           </Link>
 

@@ -1,4 +1,5 @@
-import { Text, Image, Flex, VStack } from '@chakra-ui/react';
+import { Text, Flex, VStack } from '@chakra-ui/react';
+import ExportedImage from 'next-image-export-optimizer';
 
 export const Shop: React.FC = () => {
   return (
@@ -38,11 +39,12 @@ export const Shop: React.FC = () => {
         gap='1.5rem'
         flexDir={{ base: 'column', md: 'row' }}
       >
-        <Image
+        <ExportedImage
           src='about/about.png'
           alt='about'
-          w={{ base: '300px', lg: '350px' }}
-          objectFit='cover'
+          width={300}
+          height={450}
+          // objectFit='cover'
         />
         <Text
           fontSize={{ base: 'md' }}

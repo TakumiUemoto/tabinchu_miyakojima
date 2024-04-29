@@ -1,28 +1,27 @@
-import { Image } from '@chakra-ui/image';
-import { Center, Button, Text, Flex, VStack, Link } from '@chakra-ui/react';
+import { Button, Text, Flex, VStack, Link } from '@chakra-ui/react';
 
 import styles from './templates.module.scss';
+import ExportedImage from 'next-image-export-optimizer';
 
 export const HomeMain: React.FC = () => {
   return (
-    <Center
+    <VStack
       id='main'
-      justifyContent={{ base: 'center', md: 'space-evenly' }}
+      justify={{ base: 'center', md: 'space-evenly' }}
+      align='center'
       flexDir='column'
       height='100dvh'
       color='white'
       fontWeight='bold'
       className={styles.main}
     >
-      <Image
+      <ExportedImage
         src='logo/skeleton_text.jpg'
-        objectFit='cover'
-        borderRadius='full'
-        boxSize={{ base: '200px', sm: '250px', md: '300px' }}
         alt='logo_text_skeleton'
-        mt={{ base: '-1rem', md: '3rem' }}
+        width={300}
+        height={300}
       />
-      <VStack>
+      <VStack pt={{ base: '3rem', md: '0rem' }}>
         <Text
           fontSize={{ base: 'sm', sm: 'lg', md: 'xl', lg: '2xl' }}
           fontWeight='bold'
@@ -68,6 +67,6 @@ export const HomeMain: React.FC = () => {
           </Button>
         </Link>
       </Flex>
-    </Center>
+    </VStack>
   );
 };
