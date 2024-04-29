@@ -1,7 +1,8 @@
-import { Box, Flex, Image } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
 import { PhotoSlider } from '@/components/organisms/PhotoSlider';
+import ExportedImage from 'next-image-export-optimizer';
 
 const photos = [
   { src: 'photo_gallery/1.jpg', alt: '1' },
@@ -25,7 +26,7 @@ export const HomePhotoGallery: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      if (screenWidth < 850) {
+      if (screenWidth < 900) {
         return setIsSlider(true);
       }
       return setIsSlider(false);
@@ -47,11 +48,11 @@ export const HomePhotoGallery: React.FC = () => {
           <PhotoSlider>
             {photos.map((photo) => (
               <div key={photo.alt} style={{ width: '100%' }}>
-                <Image
+                <ExportedImage
                   src={photo.src}
                   alt={photo.alt}
-                  // height='350px'
-                  // objectFit='cover'
+                  width={300}
+                  height={400}
                 />
               </div>
             ))}
@@ -67,11 +68,12 @@ export const HomePhotoGallery: React.FC = () => {
             w={{ base: '95dvw', md: '100dvw' }}
           >
             {row1.map((photo) => (
-              <Image
+              <ExportedImage
                 key={photo.alt}
                 src={photo.src}
                 alt={photo.alt}
-                height={{ base: 250, md: 300, lg: 350 }}
+                width={photo.alt === '3' ? 400 : 200}
+                height={350}
               />
             ))}
           </Flex>
@@ -84,11 +86,12 @@ export const HomePhotoGallery: React.FC = () => {
             w={{ base: '95dvw', md: '100dvw' }}
           >
             {row2.map((photo) => (
-              <Image
+              <ExportedImage
                 key={photo.alt}
                 src={photo.src}
                 alt={photo.alt}
-                height={{ base: 250, md: 300, lg: 350 }}
+                width={photo.alt === '4' ? 400 : 200}
+                height={350}
               />
             ))}
           </Flex>
@@ -101,11 +104,12 @@ export const HomePhotoGallery: React.FC = () => {
             w={{ base: '95dvw', md: '100dvw' }}
           >
             {row3.map((photo) => (
-              <Image
+              <ExportedImage
                 key={photo.alt}
                 src={photo.src}
                 alt={photo.alt}
-                height={{ base: 250, md: 300, lg: 350 }}
+                width={photo.alt === '9' ? 400 : 200}
+                height={350}
               />
             ))}
           </Flex>

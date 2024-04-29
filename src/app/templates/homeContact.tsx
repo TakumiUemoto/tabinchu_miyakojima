@@ -12,7 +12,7 @@ export const HomeContact: React.FC = () => {
       >
         お問い合わせ
       </Text>
-      <ImageCard imagePath='home/contact.jpg'>
+      <ImageCard imagePath='top/contact.jpg'>
         <Flex
           flexDir='column'
           justify='center'

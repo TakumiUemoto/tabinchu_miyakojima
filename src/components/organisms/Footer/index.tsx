@@ -1,7 +1,7 @@
 import { Flex, VStack, Link, Text } from '@chakra-ui/react';
-import { Image } from '@chakra-ui/image';
 
 import useMediaQuery from '@/lib/hooks/useMediaQuery';
+import ExportedImage from 'next-image-export-optimizer';
 
 const links = [
   { title: 'Q & A', href: '/contact#q_and_a' },
@@ -23,10 +23,11 @@ export const Footer: React.FC = () => {
         bgColor='rgba(36, 95, 167, 0.9)'
         p='1rem 3rem'
       >
-        <Image
-          src='logo/skeleton_text.jpg'
-          boxSize={{ base: '50px', md: '80px' }}
-          alt='logo'
+        <ExportedImage
+          src='logo/skeleton.jpg'
+          alt='sleleton_logo'
+          width={60}
+          height={60}
         />
 
         <VStack flex={1}>

@@ -7,7 +7,7 @@ export default function NotFound() {
     <Flex justify='center' align='center' flexDir='column' gap='2rem' pt='5rem'>
       <Text size='4xl'>404 Not Found.</Text>
       <Text size='6xl'>指定されたURLにはページが存在しません。</Text>
-      <Link as={NextLink} href='/home' color='blue' textDecoration='underline'>
+      <Link as={NextLink} href='/' color='blue' textDecoration='underline'>
         ホームへ戻る
       </Link>
     </Flex>

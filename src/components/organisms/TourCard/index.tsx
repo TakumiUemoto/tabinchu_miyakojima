@@ -5,11 +5,11 @@ import {
   Divider,
   Stack,
   VStack,
-  Image,
   CardProps,
   ButtonProps,
   Link,
 } from '@chakra-ui/react';
+import ExportedImage from 'next-image-export-optimizer';
 
 import NextLink from 'next/link';
 
@@ -66,8 +66,13 @@ export const TourCard: React.FC<TourCardProps> = ({
         </VStack>
       ) : (
         <>
-          <CardBody>
-            <Image src={imagePath} borderRadius='lg' />
+          <CardBody borderRadius='2rem'>
+            <ExportedImage
+              src={imagePath}
+              alt='tour_image'
+              width={400}
+              height={300}
+            />
             <Stack mt='6' spacing='3'>
               {heading}
               {content}

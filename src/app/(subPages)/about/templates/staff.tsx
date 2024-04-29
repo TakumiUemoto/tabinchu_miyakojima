@@ -1,4 +1,5 @@
-import { Flex, Divider, Box, Text, Image, VStack } from '@chakra-ui/react';
+import { Flex, Divider, Box, Text, VStack } from '@chakra-ui/react';
+import ExportedImage from 'next-image-export-optimizer';
 
 export const Staff: React.FC = () => {
   return (
@@ -19,11 +20,12 @@ export const Staff: React.FC = () => {
             w={{ base: 'full', lg: '30%' }}
             gap='1.5rem'
           >
-            <Image
+            <ExportedImage
               src='about/staff_hiroki.jpg'
-              borderRadius='50%'
-              boxSize={{ base: '200px', sm: '250px' }}
-              alt='staff'
+              alt='staff_hiroki'
+              width={220}
+              height={220}
+              style={{ borderRadius: '50%' }}
             />
             <Text fontSize='2xl' fontWeight='bold'>
               ヒロキ
@@ -87,11 +89,12 @@ export const Staff: React.FC = () => {
             w={{ base: 'full', lg: '30%' }}
             gap='1.5rem'
           >
-            <Image
+            <ExportedImage
               src='about/staff_charlie.jpg'
-              borderRadius='50%'
-              boxSize={{ base: '200px', sm: '250px' }}
-              alt='staff'
+              alt='staff_charlie'
+              width={220}
+              height={220}
+              style={{ borderRadius: '50%' }}
             />
             <Text fontSize='2xl' fontWeight='bold'>
               チャーリー

@@ -16,7 +16,7 @@ export const HomeTour: React.FC = () => {
         <Flex flexDir={{ base: 'column' }} gap='2rem'>
           {[
             {
-              imagePath: 'home/tour_snorkel.jpg',
+              imagePath: 'top/tour_snorkel.jpg',
               heading: (
                 <Text fontSize={{ base: '3xl', md: '5xl' }} fontWeight='bold'>
                   シュノーケル
@@ -28,15 +28,18 @@ export const HomeTour: React.FC = () => {
                   wordBreak='keep-all'
                   overflowWrap='anywhere'
                   fontWeight='bold'
+                  align='center'
                 >
-                  ＊ライフジャケットを着用してのツアーです。
+                  ※ライフジャケットを
+                  <wbr />
+                  着用してのツアー
                 </Text>
               ),
               buttonText: 'ツアー詳細',
               buttonLink: '/tour',
             },
             {
-              imagePath: 'home/tour_skin.jpg',
+              imagePath: 'top/tour_skin.jpg',
               heading: (
                 <Text fontSize={{ base: '3xl', md: '5xl' }} fontWeight='bold'>
                   スキンダイビング
@@ -48,15 +51,18 @@ export const HomeTour: React.FC = () => {
                   wordBreak='keep-all'
                   overflowWrap='anywhere'
                   fontWeight='bold'
+                  align='center'
                 >
-                  ※ライフジャケットなしで泳げるツアーです。
+                  ※ライフジャケットなしで
+                  <wbr />
+                  泳げるツアー
                 </Text>
               ),
               buttonText: 'ツアー詳細',
               buttonLink: '/tour',
             },
             {
-              imagePath: 'home/tour_sup.jpg',
+              imagePath: 'top/tour_sup.jpg',
               heading: (
                 <Text fontSize={{ base: '4xl', md: '6xl' }} fontWeight='bold'>
                   S U P
@@ -65,9 +71,14 @@ export const HomeTour: React.FC = () => {
               content: (
                 <Text
                   fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+                  wordBreak='keep-all'
+                  overflowWrap='anywhere'
                   fontWeight='bold'
+                  align='center'
                 >
-                  ※Tabibito cafe の軽食付きツアー
+                  ※Tabibito cafe
+                  <wbr />
+                  軽食付きツアー
                 </Text>
               ),
               buttonText: 'ツアー詳細',
