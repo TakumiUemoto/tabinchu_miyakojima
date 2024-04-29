@@ -1,8 +1,8 @@
-import { Flex, Divider, Box, Image, Text } from '@chakra-ui/react';
+import { Flex, Divider, Box, Text, Image } from '@chakra-ui/react';
 
 export const Staff: React.FC = () => {
   return (
-    <>
+    <Box id='staff'>
       <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='bold'>
         スタッフ紹介
       </Text>
@@ -139,6 +139,6 @@ export const Staff: React.FC = () => {
           </Box>
         </Flex>
       </Box>
-    </>
+    </Box>
   );
 };

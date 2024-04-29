@@ -24,7 +24,7 @@ export const HomeAbout: React.FC = () => {
   }, []);
 
   return (
-    <VStack w='full'>
+    <VStack id='about' w='full'>
       <Center display='flex' flexDir='column' gap='1.5rem' w='full'>
         <Flex justify='center' align='center' flexDir='column'>
           <Text

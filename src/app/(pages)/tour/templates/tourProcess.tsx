@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 
 export const TourProcess: React.FC = () => {
   return (
-    <VStack flexDir='column' gap='1rem' pt='5rem' mb='1.5rem'>
+    <VStack id='tour' flexDir='column' gap='1rem' pt='5rem' mb='1.5rem'>
       <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='bold'>
         🏖 ツアーの流れ 🤿
       </Text>

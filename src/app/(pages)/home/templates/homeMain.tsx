@@ -6,6 +6,7 @@ import styles from './templates.module.scss';
 export const HomeMain: React.FC = () => {
   return (
     <Center
+      id='main'
       justifyContent={{ base: 'center', md: 'space-evenly' }}
       flexDir='column'
       height='100dvh'

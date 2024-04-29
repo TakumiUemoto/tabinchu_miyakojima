@@ -3,7 +3,7 @@ import { VStack, Flex, Text } from '@chakra-ui/react';
 
 export const HomeTour: React.FC = () => {
   return (
-    <VStack w='full'>
+    <VStack id='tour' w='full'>
       <Text
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mb='1rem'
