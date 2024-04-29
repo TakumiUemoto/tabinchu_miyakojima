@@ -31,16 +31,16 @@ export const Header: React.FC = () => {
         top='0'
         w='full'
         h={{ base: '60px', md: '80px' }}
-        p='0 1rem 0 0'
+        p='0 1rem 0 1rem'
         zIndex={100}
         bg='rgba(200, 200, 200, 0.85)'
       >
         <Link as={NextLink} href='/'>
           <ExportedImage
-            src='logo/skeleton.png'
+            src='logo/skeleton.webp'
             alt='logo_skeleton'
-            width={70}
-            height={70}
+            width={50}
+            height={50}
             style={{ borderRadius: '50%' }}
           />
         </Link>
@@ -76,10 +76,10 @@ export const Header: React.FC = () => {
         <Flex align='center' gap='1rem'>
           <Link as={NextLink} href={process.env.NEXT_PUBLIC_INSTAGRAM}>
             <ExportedImage
-              src='logo/instagram.png'
+              src='logo/instagram.webp'
               alt='instagram'
-              width={70}
-              height={70}
+              width={50}
+              height={50}
               style={{ borderRadius: '50%' }}
             />
           </Link>

@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
         p='1rem 3rem'
       >
         <ExportedImage
-          src='logo/skeleton.png'
+          src='logo/skeleton.webp'
           alt='sleleton_logo'
           width={60}
           height={60}

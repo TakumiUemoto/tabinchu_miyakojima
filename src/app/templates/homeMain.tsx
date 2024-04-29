@@ -16,7 +16,7 @@ export const HomeMain: React.FC = () => {
       className={styles.main}
     >
       <ExportedImage
-        src='logo/skeleton_text.png'
+        src='logo/skeleton_text.webp'
         alt='logo_text_skeleton'
         width={300}
         height={300}
