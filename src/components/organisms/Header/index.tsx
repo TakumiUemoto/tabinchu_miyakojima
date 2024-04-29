@@ -37,10 +37,10 @@ export const Header: React.FC = () => {
       >
         <Link as={NextLink} href='/'>
           <ExportedImage
-            src='logo/skeleton.jpg'
+            src='logo/skeleton.png'
+            alt='logo_skeleton'
             width={70}
             height={70}
-            alt='logo_skeleton'
             style={{ borderRadius: '50%' }}
           />
         </Link>
@@ -76,7 +76,7 @@ export const Header: React.FC = () => {
         <Flex align='center' gap='1rem'>
           <Link as={NextLink} href={process.env.NEXT_PUBLIC_INSTAGRAM}>
             <ExportedImage
-              src='logo/instagram.jpg'
+              src='logo/instagram.png'
               alt='instagram'
               width={70}
               height={70}

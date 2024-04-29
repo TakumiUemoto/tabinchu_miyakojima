@@ -40,11 +40,10 @@ export const Shop: React.FC = () => {
         flexDir={{ base: 'column', md: 'row' }}
       >
         <ExportedImage
-          src='about/about.png'
+          src='about/about.jpg'
           alt='about'
           width={300}
           height={450}
-          // objectFit='cover'
         />
         <Text
           fontSize={{ base: 'md' }}
