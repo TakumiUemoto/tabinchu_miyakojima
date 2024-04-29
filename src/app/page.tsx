@@ -1,13 +1,38 @@
 'use client';
 
-import { NextPage } from 'next';
-import { useLayoutEffect } from 'react';
+import React from 'react';
 
-const TopPage: NextPage = () => {
-  useLayoutEffect(() => {
-    window.location.href = '/home';
-  }, []);
-  return <></>;
+import { Flex, VStack } from '@chakra-ui/react';
+
+import { HomeMain } from './templates/homeMain';
+import { HomeAbout } from './templates/homeAbout';
+import { HomeTour } from './templates/homeTour';
+import { HomeReservation } from './templates/homeReservation';
+import { HomeContact } from './templates/homeContact';
+import { NextPage } from 'next/types';
+import HomePhotoGallery from './templates/homePhotoGallery';
+
+const Home: NextPage = () => {
+  return (
+    <VStack gap='5rem'>
+      <HomeMain />
+      <Flex
+        justify='center'
+        align='center'
+        flexDir='column'
+        gap='4rem'
+        w={{ base: 'full', md: '90%', lg: '80%' }}
+        p={{ base: 0, md: '1rem', lg: '2rem' }}
+        mb='4rem'
+      >
+        <HomeAbout />
+        <HomeTour />
+        <HomeReservation />
+        <HomePhotoGallery />
+        <HomeContact />
+      </Flex>
+    </VStack>
+  );
 };
 
-export default TopPage;
+export default Home;
