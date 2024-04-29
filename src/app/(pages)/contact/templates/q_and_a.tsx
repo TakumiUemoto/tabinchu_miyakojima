@@ -21,7 +21,7 @@ const Template: React.FC<QandAProps> = ({ title, children }) => {
 export const QandA: React.FC = () => {
   return (
     // NOTE: ヘッダーの高さ関連のリファクタ要？
-    <VStack id='q_and_a' pt='6rem'>
+    <VStack id='q_and_a' pt='6rem' px={{ base: '0.5rem', md: '0rem' }}>
       <Text
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mb='1rem'
@@ -33,7 +33,8 @@ export const QandA: React.FC = () => {
       <Flex
         flexDir='column'
         gap='1.5rem'
-        p='4rem'
+        py={{ base: '4rem' }}
+        px={{ base: '2rem', md: '4rem' }}
         bgColor='rgba(214,230,245,0.5)'
         borderRadius='5rem'
       >
@@ -162,7 +163,7 @@ export const QandA: React.FC = () => {
           fontWeight='bold'
           pt='1rem'
         >
-          他に不明な点がございましたら、
+          他に不明な点がございましたら
           <wbr />
           公式LINEにお問合せください!
         </Text>

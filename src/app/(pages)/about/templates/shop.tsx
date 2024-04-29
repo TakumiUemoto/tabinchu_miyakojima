@@ -1,8 +1,8 @@
-import { Text, Image, Flex, Box } from '@chakra-ui/react';
+import { Text, Image, Flex, VStack } from '@chakra-ui/react';
 
 export const Shop: React.FC = () => {
   return (
-    <Box id='shop'>
+    <VStack id='shop'>
       <Text
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
         mt='8rem'
@@ -94,6 +94,6 @@ export const Shop: React.FC = () => {
           と呼んでいます。
         </Text>
       </Flex>
-    </Box>
+    </VStack>
   );
 };
