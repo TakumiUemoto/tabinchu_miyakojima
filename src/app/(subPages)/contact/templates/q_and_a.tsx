@@ -52,6 +52,17 @@ export const QandA: React.FC = () => {
           </Box>
         </Template>
 
+        <Template title='集合場所まではどうやって行けばいいですか？'>
+          <Box>
+            <Text>
+              基本、現地集合・現地解散となっており、レンタカーを借りて集合場所に来ていただく形となっております。
+            </Text>
+            <Text>
+              車の手配がどうしてもできない場合は公式LINEか電話にてご相談ください!
+            </Text>
+          </Box>
+        </Template>
+
         <Template title='写真はツアー料金に含まれていますか？'>
           <Box>
             <Text>はい、写真代はツアー料金に含まれております。</Text>
@@ -67,15 +78,31 @@ export const QandA: React.FC = () => {
           </Box>
         </Template>
 
+        <Template title='子供は何歳から参加できますか？​'>
+          <Box>
+            <Text>シュノーケル：５歳以上から</Text>
+            <Text>
+              小さいお子様に関しては水中が見える浮き輪をご用意し、スタッフを一人常時配置いたします。
+            </Text>
+            <br />
+            <Text>スキンダイビング / SUP: 12歳以上から</Text>
+            <Text>
+              SUPに関しては12歳未満の方は、スタッフもしくは保護者の方のボートに一緒に乗る形でツアーに参加していただけます。
+            </Text>
+          </Box>
+        </Template>
+
         <Template title='1人でも貸切になりますか？'>
           <Box>
-            <Text>はい、お一人様でも貸切オーダーメイドツアーとなります。</Text>
+            <Text>
+              はい、お一人様でも貸切オーダーメイドツアーの提供は可能です。
+            </Text>
           </Box>
         </Template>
 
         <Template title='泳げないのですが、参加は可能ですか？​'>
           <Box>
-            <Text>はい、ツアーの参加は可能です。</Text>
+            <Text>はい、ツアーの参加は可能 です。</Text>
             <Text>
               ライフジャケットを着用するシュノーケルをオススメいたします!
             </Text>
@@ -113,11 +140,7 @@ export const QandA: React.FC = () => {
 
         <Template title='ツアー参加するにあたっての制限はありますか？'>
           <Box>
-            <Text>
-              詳しくは利用規約をご確認ください。ページの下にリンクがございます。
-            </Text>
-            <Text>年齢制限：</Text>
-            <Text>重大な疾患：</Text>
+            <Text>詳しくは利用規約をご確認ください。</Text>
           </Box>
         </Template>
 
@@ -142,14 +165,14 @@ export const QandA: React.FC = () => {
               タオル・着替え・飲み物・ツアー代金があれば問題ございません。
             </Text>
             <Text>
-              着替えの際テントをご用意しておりますが、ポンチョなどがあればよりスムーズに着替えられると思われます。
+              着替えの際、テントも準備していますので、ご利用の際は事前にお声がけください。
             </Text>
           </Box>
         </Template>
 
         <Template title='支払い方法は何がありますか？'>
           <Box>
-            <Text>現金での前払いとなっております。</Text>
+            <Text>現金 でのお支払いとなっております。</Text>
             <Text>ツアー当日までに現金のご用意をお願いいたします。</Text>
             <Text>現金での支払いが難しい場合はご相談ください。</Text>
           </Box>
