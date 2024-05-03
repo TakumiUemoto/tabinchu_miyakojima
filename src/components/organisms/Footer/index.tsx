@@ -28,6 +28,7 @@ export const Footer: React.FC = () => {
           alt='sleleton_logo'
           width={60}
           height={60}
+          loading='lazy'
         />
 
         <VStack flex={1}>

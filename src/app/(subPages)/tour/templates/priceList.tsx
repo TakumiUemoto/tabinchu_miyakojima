@@ -103,18 +103,21 @@ export const PriceList: React.FC = () => {
           alt='tour/snorkel'
           width={275}
           height={600}
+          loading='lazy'
         />
         <ExportedImage
           src='tour/skin_diving.jpg'
           alt='tour/skin_diving'
           width={275}
           height={600}
+          loading='lazy'
         />
         <ExportedImage
           src='tour/sup.jpg'
           alt='tour/sup'
           width={275}
           height={600}
+          loading='lazy'
         />
       </Flex>
     </VStack>

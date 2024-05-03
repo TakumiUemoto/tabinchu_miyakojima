@@ -58,6 +58,7 @@ export const Reservation: React.FC = () => {
               alt='contact/reservation_status'
               width={275}
               height={500}
+              loading='lazy'
             />
           </Flex>
 
@@ -77,12 +78,14 @@ export const Reservation: React.FC = () => {
               alt='contact/line_1'
               width={300}
               height={300}
+              loading='lazy'
             />
             <ExportedImage
               src='contact/line_2.jpg'
               alt='contact/line_2'
               width={300}
               height={300}
+              loading='lazy'
             />
           </Flex>
         </Flex>

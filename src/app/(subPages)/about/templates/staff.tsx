@@ -26,6 +26,7 @@ export const Staff: React.FC = () => {
               width={220}
               height={220}
               style={{ borderRadius: '50%' }}
+              loading='lazy'
             />
             <Text fontSize='2xl' fontWeight='bold'>
               ヒロキ
@@ -95,6 +96,7 @@ export const Staff: React.FC = () => {
               width={220}
               height={220}
               style={{ borderRadius: '50%' }}
+              loading='lazy'
             />
             <Text fontSize='2xl' fontWeight='bold'>
               チャーリー

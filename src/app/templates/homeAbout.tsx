@@ -74,8 +74,7 @@ export const HomeAbout: React.FC = () => {
             alt={imageRender?.split('.')[0]}
             width={imageSize.width}
             height={imageSize.height}
-            // mt='1rem'
-            // maxW={{ base: '80%', lg: '70%' }}
+            loading='lazy'
           />
         </Flex>
       </Center>

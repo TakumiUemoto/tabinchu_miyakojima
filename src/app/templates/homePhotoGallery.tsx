@@ -53,6 +53,7 @@ export const HomePhotoGallery: React.FC = () => {
                   alt={photo.alt}
                   width={300}
                   height={400}
+                  loading='lazy'
                 />
               </div>
             ))}
@@ -74,6 +75,7 @@ export const HomePhotoGallery: React.FC = () => {
                 alt={photo.alt}
                 width={photo.alt === '3' ? 400 : 200}
                 height={350}
+                loading='lazy'
               />
             ))}
           </Flex>
@@ -92,6 +94,7 @@ export const HomePhotoGallery: React.FC = () => {
                 alt={photo.alt}
                 width={photo.alt === '4' ? 400 : 200}
                 height={350}
+                loading='lazy'
               />
             ))}
           </Flex>
@@ -110,6 +113,7 @@ export const HomePhotoGallery: React.FC = () => {
                 alt={photo.alt}
                 width={photo.alt === '9' ? 400 : 200}
                 height={350}
+                loading='lazy'
               />
             ))}
           </Flex>
