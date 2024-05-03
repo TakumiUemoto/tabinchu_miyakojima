@@ -30,7 +30,7 @@ export const HomeMain: React.FC = () => {
           wordBreak='keep-all'
           overflowWrap='anywhere'
           textAlign='center'
-          bg='rgba(0,0,0, 0.35)'
+          bg='rgba(0,0,0, 0.5)'
         >
           脱サラ水中カメラマンと
           <wbr />
@@ -43,7 +43,7 @@ export const HomeMain: React.FC = () => {
           wordBreak='keep-all'
           overflowWrap='anywhere'
           textAlign='center'
-          bg='rgba(0,0,0, 0.35)'
+          bg='rgba(0,0,0,  0.5)'
         >
           『1組貸切 オーダーメイドツアー』
         </Text>
@@ -54,7 +54,7 @@ export const HomeMain: React.FC = () => {
         flexDir={{ base: 'column', sm: 'row' }}
         mt={{ base: '1.5rem', md: '0' }}
         mb={{ base: '0', md: '1.5rem' }}
-        bg='rgba(0,0,0, 0.35)'
+        bg='rgba(0,0,0,  0.5)'
       >
         <Link href={process.env.NEXT_PUBLIC_TIMETREE} isExternal>
           <Button colorScheme='whiteAlpha' size='lg' w='15rem'>
