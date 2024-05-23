@@ -60,10 +60,14 @@ export const TeamsOfServices: React.FC = () => {
           たびんちゅ 宮古島ではツアー参加時には年齢制限を設けております。
           <br />
           <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;シュノーケル：５歳以上〜６５歳未満
+          <span style={{ fontWeight: 'bold' }}>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;シュノーケル：５歳以上〜６５歳未満
+          </span>
           <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;スキンダイビング / SUP:
-          12歳以上 ~ 65歳未満
+          <span style={{ fontWeight: 'bold' }}>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;スキンダイビング / SUP:
+            12歳以上 ~ 65歳未満
+          </span>
           <br />
           <br />
           対象年齢から外れる場合は、別途公式LINEにてご相談ください。
