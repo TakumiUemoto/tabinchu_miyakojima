@@ -5,10 +5,17 @@ module.exports = {
     node: true,
   },
   extends: [
+    'next',
+    'next/core-web-vitals',
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {

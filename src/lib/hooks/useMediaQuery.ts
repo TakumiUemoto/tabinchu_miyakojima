@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 
 function useMediaQuery(query: string) {
-  if (typeof window === 'undefined') return;
+  // matchesの初期値をfalseに設定
   const [matches, setMatches] = useState<boolean>(false);
 
   useEffect(() => {
+    // ウィンドウが定義されていない場合は何もせずにreturnする
+    if (typeof window === 'undefined') return;
+
     const mediaQuery = window.matchMedia(query);
     setMatches(mediaQuery.matches);
 
