@@ -4,6 +4,7 @@ import { QandA } from './templates/q_and_a';
 import { Reservation } from './templates/reservation';
 import { TeamsOfServices } from './templates/teams_of_services';
 import { CancelPolicy } from './templates/cancel_policy';
+import { ConfirmCheckList } from './templates/confirm_check_list';
 
 const Contact: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const Contact: NextPage = () => {
       <Reservation />
       <CancelPolicy />
       <QandA />
+      <ConfirmCheckList />
       <TeamsOfServices />
     </Flex>
   );
