@@ -26,14 +26,18 @@ export const ConfirmCheckList: React.FC = () => {
           wordBreak='keep-all'
           overflowWrap='anywhere'
           textAlign='center'
-          fontSize={{ base: 'lg' }}
+          fontSize={{ base: 'md', lg: 'lg' }}
+          p={{ base: '0.5rem', md: '1rem' }}
           border='2px solid black'
         >
-          マリンスポーツはルールを守ってご参加する場合は安全なアクティビティですが、特定の病気や過去に重大な疾患がある方には非常に危険な事態を招く可能性があります。この確認表はツアー参加前に、ツアー中に安全性を阻害させる要因があるかの判断を行い、ツアーガイドとゲストとの双方でツアーへの参加可否を確認するためのものです。この確認作業はゲストのツアーへの参加を必ずしもお断りするためのものではありません。決して自己判断せず、確認項目に一つでも当てはまる場合は、必ず事前にご連絡下さい。
+          マリンスポーツはルールを守ってご参加する場合は安全なアクティビティですが、特定の病気や過去に重大な疾患がある方には非常に危険な事態を招く可能性があります。
+          この確認表はツアー参加前に、ツアー中に安全性を阻害させる要因があるかの判断を行い、ツアーガイドとゲストとの双方でツアーへの参加可否を確認するためのものです。
+          この確認作業はゲストのツアーへの参加を必ずしもお断りするためのものではありません。
+          決して自己判断せず、確認項目に一つでも当てはまる場合は、必ず事前にご連絡下さい。
         </Text>
 
         <Text
-          fontSize={{ base: 'lg', md: 'xl' }}
+          fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}
           mb='1rem'
           fontWeight='bold'
           textAlign='center'
@@ -75,7 +79,7 @@ export const ConfirmCheckList: React.FC = () => {
           wordBreak='keep-all'
           overflowWrap='anywhere'
           textAlign='center'
-          fontSize={{ base: 'lg' }}
+          fontSize={{ base: 'md', md: 'lg' }}
           textDecoration='underline'
           fontWeight='bold'
         >
