@@ -2,7 +2,6 @@ import { NextPage } from 'next';
 import { Flex } from '@chakra-ui/react';
 import { QandA } from './templates/q_and_a';
 import { Reservation } from './templates/reservation';
-import { TeamsOfServices } from './templates/teams_of_services';
 import { CancelPolicy } from './templates/cancel_policy';
 
 const Contact: NextPage = () => {
@@ -11,7 +10,6 @@ const Contact: NextPage = () => {
       <Reservation />
       <CancelPolicy />
       <QandA />
-      <TeamsOfServices />
     </Flex>
   );
 };

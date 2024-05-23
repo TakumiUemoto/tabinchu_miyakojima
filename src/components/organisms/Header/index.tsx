@@ -46,7 +46,7 @@ export const Header: React.FC = () => {
         </Link>
 
         <Flex
-          display={{ base: 'none', md: 'flex' }}
+          display={{ base: 'none', lg: 'flex' }}
           justify='space-between'
           gap='1rem'
           w='auto'
@@ -85,7 +85,7 @@ export const Header: React.FC = () => {
           </Link>
 
           <HamburgerIcon
-            display={{ base: 'flex', md: 'none' }}
+            display={{ base: 'flex', lg: 'none' }}
             width='3rem'
             height='3rem'
             onClick={onOpen}

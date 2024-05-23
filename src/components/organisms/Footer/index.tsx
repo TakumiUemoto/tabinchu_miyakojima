@@ -7,7 +7,7 @@ const links = [
   { title: 'Q & A', href: '/contact#q_and_a' },
   {
     title: '利用規約',
-    href: '/contact#teams_of_services',
+    href: '/confirmation#teams_of_services',
   },
 ];
 
