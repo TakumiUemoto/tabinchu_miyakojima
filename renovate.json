@@ -1,6 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:base",
+    ":disableDependencyDashboard"
+  ],
+  "timezone": "Asia/Tokyo",
+  "prConcurrentLimit": "5",
+  "major": {
+    "enabled": false
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "groupName": "eslint",
+      "automerge": true,
+    }
   ]
+    
 }
